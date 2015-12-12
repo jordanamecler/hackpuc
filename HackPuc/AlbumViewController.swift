@@ -16,14 +16,14 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         let categoryLabel = UILabel()
-        categoryLabel.frame = CGRectMake(0, 70, 150, 30)
+        categoryLabel.frame = CGRectMake(0, 40, 150, 30)
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = "Categories"
         
         self.view.addSubview(categoryLabel)
 
-        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width, self.view.frame.height/1.5)
+        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width, self.view.frame.height/1.2)
         categoriesTableView.center.x = self.view.center.x
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
@@ -42,6 +42,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let menuCell = UITableViewCell()
         
         menuCell.backgroundColor = UIColor.clearColor()
@@ -69,6 +70,23 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         return menuCell
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let nextViewController = CollectionViewController()
+        nextViewController.type = (tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let transition = CATransition()
+        transition.duration = 0.5;
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade;
+        
+        self.view.layer.addAnimation(transition, forKey: nil)
+        
+        self.presentViewController(nextViewController, animated: true, completion: nil)
     }
     
     /*
