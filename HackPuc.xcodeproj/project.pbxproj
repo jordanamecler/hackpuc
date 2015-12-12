@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C95D7271C1BBF6600B43C43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95D7261C1BBF6600B43C43 /* FBSDKCoreKit.framework */; };
+		0C95D7291C1BBF7900B43C43 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95D7281C1BBF7900B43C43 /* FBSDKLoginKit.framework */; };
 		0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */; };
 		0CBC5C361C1B8773006BEEFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C351C1B8773006BEEFE /* ViewController.swift */; };
 		0CBC5C391C1B8773006BEEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C371C1B8773006BEEFE /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C95D7261C1BBF6600B43C43 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0C95D7281C1BBF7900B43C43 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0CBC5C301C1B8773006BEEFE /* HackPuc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPuc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBC5C351C1B8773006BEEFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C95D7291C1BBF7900B43C43 /* FBSDKLoginKit.framework in Frameworks */,
+				0C95D7271C1BBF6600B43C43 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C95D7241C1BBBAE00B43C43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C95D7281C1BBF7900B43C43 /* FBSDKLoginKit.framework */,
+				0C95D7261C1BBF6600B43C43 /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0CBC5C271C1B8773006BEEFE = {
 			isa = PBXGroup;
 			children = (
+				0C95D7241C1BBBAE00B43C43 /* Frameworks */,
 				0CBC5C321C1B8773006BEEFE /* HackPuc */,
 				0CBC5C471C1B8773006BEEFE /* HackPucTests */,
 				0CBC5C521C1B8773006BEEFE /* HackPucUITests */,
@@ -399,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/jordanamecler/Documents/FacebookSDK;
 				INFOPLIST_FILE = HackPuc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPuc;
@@ -410,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/jordanamecler/Documents/FacebookSDK;
 				INFOPLIST_FILE = HackPuc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPuc;
@@ -484,6 +502,7 @@
 				0CBC5C5A1C1B8773006BEEFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CBC5C5B1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPucTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +511,7 @@
 				0CBC5C5D1C1B8773006BEEFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CBC5C5E1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPucUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +520,7 @@
 				0CBC5C601C1B8773006BEEFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
