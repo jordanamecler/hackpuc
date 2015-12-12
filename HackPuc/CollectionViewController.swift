@@ -20,6 +20,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.whiteColor()
+       
         
         let backButton = UIButton()
         backButton.frame = CGRectMake(10, 30, 20, 20)
