@@ -78,14 +78,75 @@ class FigurinhaViewController: UIViewController {
         }
         else if let equipe = equipe {
             
+            let cardCountryLabel = UILabel()
+            cardCountryLabel.text = "Country: \(equipe.pais)"
+            cardCountryLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            cardCountryLabel.frame = CGRectMake(cardImageView.frame.origin.x , cardImageView.frame.origin.y + cardImageView.frame.height + 10 ,view.frame.width * 0.6, 40)
+            view.addSubview(cardCountryLabel)
+            
+            let modalidadeLabel = UILabel()
+            modalidadeLabel.text = "Sport: \(equipe.modalidade)"
+            modalidadeLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            modalidadeLabel.frame = CGRectMake(cardCountryLabel.frame.origin.x , cardCountryLabel.frame.origin.y + cardCountryLabel.frame.height ,view.frame.width * 0.6, 40)
+            view.addSubview(modalidadeLabel)
+            
+            let medalsLabel = UILabel()
+            medalsLabel.frame = CGRectMake(modalidadeLabel.frame.origin.x, modalidadeLabel.frame.origin.y + modalidadeLabel.frame.height, modalidadeLabel.frame.width, modalidadeLabel.frame.height)
+            medalsLabel.text = "Members:\(equipe.integrantes)."
+            medalsLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            view.addSubview(medalsLabel)
+            
+            
         }
         else if let antiga = antiga {
+            
+            let cardName = UILabel()
+            cardName.text = "\(antiga.nome) - \(antiga.ano)"
+            cardName.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            cardName.frame = CGRectMake(cardImageView.frame.origin.x , cardImageView.frame.origin.y + cardImageView.frame.height + 10 ,view.frame.width * 0.6, 40)
+            view.addSubview(cardName)
+            
+            let winnerLabel = UILabel()
+            winnerLabel.text = "Winner: \(antiga.paisGanhador)"
+            winnerLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            winnerLabel.frame = CGRectMake(cardName.frame.origin.x , cardName.frame.origin.y + cardName.frame.height ,view.frame.width * 0.6, 40)
+            view.addSubview(winnerLabel)
+            
+            let descLabel = UILabel()
+            descLabel.frame = CGRectMake(winnerLabel.frame.origin.x, winnerLabel.frame.origin.y + winnerLabel.frame.height, winnerLabel.frame.width, winnerLabel.frame.height)
+            descLabel.text = "Members:\(antiga.desc)."
+            descLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            view.addSubview(descLabel)
+            
             
         }
         else if let turismo = turismo {
             
+            let cardName = UILabel()
+            cardName.text = "Name: \(turismo.nome)"
+            cardName.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            cardName.frame = CGRectMake(cardImageView.frame.origin.x , cardImageView.frame.origin.y + cardImageView.frame.height + 10 ,view.frame.width * 0.6, 40)
+            view.addSubview(cardName)
+            
+            let descLabel = UILabel()
+            descLabel.text = "\(turismo.desc)"
+            descLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            descLabel.frame = CGRectMake(cardName.frame.origin.x , cardName.frame.origin.y + cardName.frame.height ,view.frame.width * 0.6, 40)
+            view.addSubview(descLabel)
         }
         else if let modalidade = modalidade {
+            
+            let cardName = UILabel()
+            cardName.text = "Name: \(modalidade.nome)"
+            cardName.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            cardName.frame = CGRectMake(cardImageView.frame.origin.x , cardImageView.frame.origin.y + cardImageView.frame.height + 10 ,view.frame.width * 0.6, 40)
+            view.addSubview(cardName)
+            
+            let histLabel = UILabel()
+            histLabel.text = "\(modalidade.historia)"
+            histLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            histLabel.frame = CGRectMake(cardName.frame.origin.x , cardName.frame.origin.y + cardName.frame.height ,view.frame.width * 0.6, 40)
+            view.addSubview(histLabel)
             
         }
         
