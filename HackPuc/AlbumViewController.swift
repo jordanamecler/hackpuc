@@ -165,9 +165,10 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         transition.type = kCATransitionFade;
         
         self.view.layer.addAnimation(transition, forKey: nil)
-
         
-        SystemStatus.sharedInstance.navController?.pushViewController(nextViewController, animated: false)
+        self.navigationController?.pushViewController(nextViewController, animated: false)
+        //SystemStatus.sharedInstance.navController?.pushViewController(nextViewController, animated: false)
+        
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
