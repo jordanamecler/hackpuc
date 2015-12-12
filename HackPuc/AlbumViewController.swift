@@ -72,11 +72,12 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return menuCell
     }
 
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let nextViewController = CollectionViewController()
         nextViewController.type = (tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let transition = CATransition()
         transition.duration = 0.5;
