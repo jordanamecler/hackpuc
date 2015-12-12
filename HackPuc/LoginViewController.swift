@@ -38,9 +38,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 //        logo.textAlignment = .Center
 //        logo.text = "LOGO"
 //        logo.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
-//        //  A FONTE FUNCIONOU DE PRIMEIRA PORRA É NOIS!
-//        
+//
 //        self.view.addSubview(logo)
+        
+        let nav = UINavigationController(rootViewController: self)
+        nav.navigationBar.hidden = false
         
         
         let userLabel = UILabel()
@@ -355,7 +357,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         tabBarC.viewControllers = [profileNav, albumNav, socialNav]
         tabBarC.selectedIndex = 1
         
-        self.presentViewController(tabBarNav, animated: true, completion: nil)
+        self.navigationController?.pushViewController(tabBarNav, animated: true)
         
     }
 
