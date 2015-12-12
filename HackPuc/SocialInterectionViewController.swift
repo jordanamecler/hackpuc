@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class SocialInterectionViewController: UIViewController {
     
@@ -56,7 +57,9 @@ class SocialInterectionViewController: UIViewController {
         
         
     }
-    
+
+
+
     func ganharAction() {
         
         print("ganhar")
