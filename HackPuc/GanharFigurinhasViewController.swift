@@ -37,8 +37,8 @@ class GanharFigurinhasViewController: UIViewController, MKMapViewDelegate, CLLoc
         self.view.addSubview(mapView)
         
         let backButton = UIButton()
-        backButton.frame = CGRectMake(10, 30, 20, 20)
-        backButton.setTitle("<", forState: .Normal)
+        backButton.frame = CGRectMake(10, 30, 20,20)
+        backButton.setImage(UIImage(named: "backButton.png"), forState: .Normal)
         backButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
         backButton.addTarget(self, action: "backPressed", forControlEvents: .TouchUpInside)
         
