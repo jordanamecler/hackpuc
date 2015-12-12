@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
 
         self.view.backgroundColor = .whiteColor()
+
         
         let profileLabel = UILabel()
         profileLabel.frame = CGRectMake(0, 40, 150, 30)
@@ -35,10 +36,47 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: nameLabel.frame.size.width + 80, y: nameLabel.frame.size.height + nameLabel.frame.origin.y - 35, width: 40, height: 30)
         
+        var percAlbum = 0
+        var numTrue = 0
+        let alb: Album = DAOAlbuns().getBoolenDict()
+        
+        for i in alb.atletaArray {
+            if i == true {
+                numTrue++
+            }
+        }
+        for i in alb.equipesArray {
+            if i == true {
+                numTrue++
+            }
+        }
+        for i in alb.modalidadeArray {
+            if i == true {
+                numTrue++
+            }
+        }
+        for i in alb.olimpiadasAntigasArray {
+            if i == true {
+                numTrue++
+            }
+        }
+        for i in alb.turismoArray {
+            if i == true {
+                numTrue++
+            }
+        }
+        for i in alb.olimpiadasAntigasArray {  // evento nao ta fucionado entao dobrei essa categoria
+            if i == true {
+                numTrue++
+            }
+        }
+        
+        percAlbum = numTrue * 100 / alb.totalFigurinhas
+        
         let completedLabel = UILabel()
         completedLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
-        completedLabel.text = "0% of the album is completed"
+        completedLabel.text = "\(percAlbum)% of the album is completed"
         completedLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
         let emailLabel = UILabel()
