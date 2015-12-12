@@ -12,6 +12,7 @@
 		0C255F8E1C1C364C00978038 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C255F8D1C1C364C00978038 /* Firebase.framework */; };
 		0C255F901C1C3B5A00978038 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C255F8F1C1C3B5A00978038 /* Login.swift */; };
 		0C255F921C1C743700978038 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C255F911C1C743700978038 /* PopUpViewController.swift */; };
+		0C255F941C1CBFB400978038 /* SystemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C255F931C1CBFB400978038 /* SystemStatus.swift */; };
 		0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C95D72A1C1BE02B00B43C43 /* CollectionViewController.swift */; };
 		0C95D7351C1C2F2200B43C43 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95D7341C1C2F2200B43C43 /* CFNetwork.framework */; };
 		0C95D7371C1C2F2900B43C43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95D7361C1C2F2900B43C43 /* Security.framework */; };
@@ -74,6 +75,7 @@
 		0C255F8D1C1C364C00978038 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		0C255F8F1C1C3B5A00978038 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0C255F911C1C743700978038 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		0C255F931C1CBFB400978038 /* SystemStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemStatus.swift; sourceTree = "<group>"; };
 		0C95D72A1C1BE02B00B43C43 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0C95D7341C1C2F2200B43C43 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0C95D7361C1C2F2900B43C43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -276,6 +278,7 @@
 				D06645401C1C06F2008BEB6B /* Modalidade.swift */,
 				0C255F8F1C1C3B5A00978038 /* Login.swift */,
 				3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */,
+				0C255F931C1CBFB400978038 /* SystemStatus.swift */,
 			);
 			name = Modelo;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */,
 				D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */,
 				3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */,
+				0C255F941C1CBFB400978038 /* SystemStatus.swift in Sources */,
 				0C255F901C1C3B5A00978038 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

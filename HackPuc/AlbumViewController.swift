@@ -138,16 +138,8 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let nextViewController = CollectionViewController()
         nextViewController.type = ((tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).label?.text)!
         nextViewController.categoria = (tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).categoria
-            
-
-        let transition = CATransition()
-        transition.duration = 0.5;
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.type = kCATransitionFade;
         
-        self.view.layer.addAnimation(transition, forKey: nil)
-        
-        navigationController?.pushViewController(nextViewController, animated: true)
+        SystemStatus.sharedInstance.navController?.pushViewController(nextViewController, animated: false)
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

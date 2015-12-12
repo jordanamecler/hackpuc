@@ -321,6 +321,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
     
     func startApp() {
+        
+        
         // TabBar Itens
         let profileImage = UIImage(named: "profileItem")
         let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
@@ -338,28 +340,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         // TabBar
         
         let tabBarC = RoundedTabBarViewController()
-
-        let tabBarNav = UINavigationController(rootViewController: tabBarC)
-        tabBarNav.navigationBar.hidden = true
         let album = AlbumViewController()
         album.tabBarItem = albumItem
-        let albumNav = UINavigationController(rootViewController: album)
-        albumNav.navigationBar.hidden = true
         
         let profile = ProfileViewController()
-        let profileNav = UINavigationController(rootViewController: profile)
         profile.tabBarItem = profileItem
-        profileNav.navigationBar.hidden = true
         
         let socialInterection = SocialInterectionViewController()
-        let socialNav = UINavigationController(rootViewController: socialInterection)
-        socialNav.navigationBar.hidden = true
         socialInterection.tabBarItem = friendsItem
         
-        tabBarC.viewControllers = [profileNav, albumNav, socialNav]
+        tabBarC.viewControllers = [profile, album, socialInterection]
         tabBarC.selectedIndex = 1
         
-        self.navigationController?.pushViewController(tabBarNav, animated: true)
+        SystemStatus.sharedInstance.navController!.pushViewController(tabBarC, animated: false)
 
 
         

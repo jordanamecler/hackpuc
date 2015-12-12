@@ -19,11 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
+        
+        /* Configuração da NavigationController */
+        let startViewController = LoginViewController()
+        startViewController.modalPresentationStyle = .FullScreen
+        startViewController.modalTransitionStyle = .CrossDissolve
+        
+        SystemStatus.sharedInstance.navController = UINavigationController(rootViewController: startViewController)
+        SystemStatus.sharedInstance.navController!.navigationBar.barTintColor = .whiteColor()
+        SystemStatus.sharedInstance.navController!.navigationBarHidden = true
+        //        SystemStatus.sharedInstance.navController?.navigationBar.tintColor = .seuFloresOrange()
+
         
         if let window = self.window
         {
+            window.rootViewController = SystemStatus.sharedInstance.navController
             
             if FBSDKAccessToken.currentAccessToken() != nil {
+                
                 
                 // TabBar Itens
                 let profileImage = UIImage(named: "profileItem")
@@ -44,27 +58,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let tabBarC = RoundedTabBarViewController()
                 let album = AlbumViewController()
                 album.tabBarItem = albumItem
-                let albumNav = UINavigationController(rootViewController: album)
-                albumNav.navigationBar.hidden = true
                 
                 let profile = ProfileViewController()
-                let profileNav = UINavigationController(rootViewController: profile)
                 profile.tabBarItem = profileItem
-                profileNav.navigationBar.hidden = true
                 
                 let socialInterection = SocialInterectionViewController()
-                let socialNav = UINavigationController(rootViewController: socialInterection)
-                socialNav.navigationBar.hidden = true
                 socialInterection.tabBarItem = friendsItem
                 
-                tabBarC.viewControllers = [profileNav, albumNav, socialNav]
+                tabBarC.viewControllers = [profile, album, socialInterection]
                 tabBarC.selectedIndex = 1
-
-                window.rootViewController = tabBarC
+                
+                SystemStatus.sharedInstance.navController!.pushViewController(tabBarC, animated: false)
                 
             }
         }
-        
+
         
         return true
     }
