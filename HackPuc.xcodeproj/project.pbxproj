@@ -45,6 +45,8 @@
 		D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */; };
 		D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453F1C1C06F2008BEB6B /* Turismo.swift */; };
 		D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06645401C1C06F2008BEB6B /* Modalidade.swift */; };
+		D0E8DD5F1C1C808E003920E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */; };
+		D0E8DD611C1C8095003920E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E8DD601C1C8095003920E1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlimpiadaAntiga.swift; sourceTree = "<group>"; };
 		D066453F1C1C06F2008BEB6B /* Turismo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turismo.swift; sourceTree = "<group>"; };
 		D06645401C1C06F2008BEB6B /* Modalidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modalidade.swift; sourceTree = "<group>"; };
+		D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D0E8DD601C1C8095003920E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E8DD611C1C8095003920E1 /* MapKit.framework in Frameworks */,
+				D0E8DD5F1C1C808E003920E1 /* CoreLocation.framework in Frameworks */,
 				0C255F8B1C1C35BA00978038 /* libc++.tbd in Frameworks */,
 				0C255F8C1C1C35BA00978038 /* libicucore.tbd in Frameworks */,
 				0C95D7391C1C2F3100B43C43 /* SystemConfiguration.framework in Frameworks */,
@@ -147,6 +153,8 @@
 		0C95D7241C1BBBAE00B43C43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0E8DD601C1C8095003920E1 /* MapKit.framework */,
+				D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */,
 				0C255F8D1C1C364C00978038 /* Firebase.framework */,
 				0C255F891C1C35BA00978038 /* libc++.tbd */,
 				0C255F8A1C1C35BA00978038 /* libicucore.tbd */,
