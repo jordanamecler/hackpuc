@@ -14,6 +14,9 @@
 		0CBC5C3E1C1B8773006BEEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C3C1C1B8773006BEEFE /* LaunchScreen.storyboard */; };
 		0CBC5C491C1B8773006BEEFE /* HackPucTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C481C1B8773006BEEFE /* HackPucTests.swift */; };
 		0CBC5C541C1B8773006BEEFE /* HackPucUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C531C1B8773006BEEFE /* HackPucUITests.swift */; };
+		3F1388F51C1BD27C00EF3127 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */; };
+		3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */; };
+		3F1388F91C1BD2A900EF3127 /* SocialInterectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
 		D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBACF1C1BC47E0084355F /* Atleta.swift */; };
@@ -54,6 +57,9 @@
 		0CBC5C4F1C1B8773006BEEFE /* HackPucUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackPucUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C531C1B8773006BEEFE /* HackPucUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackPucUITests.swift; sourceTree = "<group>"; };
 		0CBC5C551C1B8773006BEEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialInterectionViewController.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D00BBACF1C1BC47E0084355F /* Atleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atleta.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 			children = (
 				D00BBACE1C1BC30B0084355F /* Modelo */,
 				0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */,
+				3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */,
+				3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */,
+				3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */,
 				0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */,
 				0CBC5C371C1B8773006BEEFE /* Main.storyboard */,
 				0CBC5C3A1C1B8773006BEEFE /* Assets.xcassets */,
@@ -297,9 +306,12 @@
 			files = (
 				D00BBAD61C1BC4BB0084355F /* OlimpiadaAntiga.swift in Sources */,
 				0CBC5C361C1B8773006BEEFE /* LoginViewController.swift in Sources */,
+				3F1388F91C1BD2A900EF3127 /* SocialInterectionViewController.swift in Sources */,
 				D00BBAD41C1BC4950084355F /* Equipe.swift in Sources */,
 				D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */,
+				3F1388F51C1BD27C00EF3127 /* AlbumViewController.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
+				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
 				D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */,
 				D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */,
 			);

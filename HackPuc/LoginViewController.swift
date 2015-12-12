@@ -71,6 +71,7 @@ class LoginViewController: UIViewController {
         
         loginButton.frame = CGRectMake(0, passwordLabel.frame.origin.y + passwordLabel.frame.height + 30, fbLoginButton.frame.width, fbLoginButton.frame.height)
         loginButton.center.x = self.view.center.x
+        loginButton.addTarget(self, action: Selector("loginAction"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(loginButton)
         
@@ -84,10 +85,26 @@ class LoginViewController: UIViewController {
         signUpButton.layer.cornerRadius = 10
         
         self.view.addSubview(signUpButton)
-        
+    
         
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    func loginAction() {
+        
+        // TabBar
+        
+        let tabBar = UITabBarController()
+        let album = AlbumViewController()
+        let profile = ProfileViewController()
+        let socialInterection = SocialInterectionViewController()
+        
+        tabBar.viewControllers = [album, profile, socialInterection]
+        
+        self.presentViewController(tabBar, animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
