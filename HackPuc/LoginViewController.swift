@@ -11,12 +11,12 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     let userTextField = UITextField()
     let passwordTextField = UITextField()
     var signUpView: PopUpViewController!
-
+    var picker = ["Argentina", "Brasil", "United States"]
 
     
     override func viewDidLoad() {
@@ -149,49 +149,114 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         signUpView = PopUpViewController()
         
         
-        let termos = UILabel()
-        termos.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.8)
-        termos.center.x = signUpView.popUpView.center.x*0.8
-        termos.center.y = signUpView.popUpView.center.y * 0.7
-        termos.textAlignment = NSTextAlignment.Center
-        termos.numberOfLines = 6
-        termos.text = "Não nos responsabilizamos pelas histórias publicadas neste aplicativo. Cada história é de responsabilidade exclusiva do usuário que a publicou."
+        let signUpLabel = UILabel()
+        signUpLabel.frame = CGRectMake(0, 0, signUpView.view.frame.size.width, signUpView.view.frame.size.height*0.8)
+        signUpLabel.text = "Cadastro"
+        signUpLabel.center.x = signUpView.popUpView.center.x * 0.8
+        signUpLabel.center.y = signUpView.popUpView.center.y * 0.2
+        signUpLabel.textAlignment = NSTextAlignment.Center
+        signUpLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 28)
         
-        signUpView.popUpView.addSubview(termos)
-        
-        signUpView.showInView(self.view)
+        signUpView.popUpView.addSubview(signUpLabel)
 
         
-//        
-//        if userTextField.text != "" && passwordTextField.text != "" {
-//            Login().signUp(userTextField.text!, password: passwordTextField.text!)
-//        }
-//        else if userTextField.text != "" {
-//            let alerta = UIAlertController(title: "Error", message: "Password missing", preferredStyle: .Alert)
-//            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-//            
-//            alerta.addAction(okAction)
-//            
-//            self.presentViewController(alerta, animated: true, completion: nil)
-//        }
-//        else if passwordTextField.text != "" {
-//            let alerta = UIAlertController(title: "Error", message: "E-mail missing", preferredStyle: .Alert)
-//            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-//            
-//            alerta.addAction(okAction)
-//            
-//            self.presentViewController(alerta, animated: true, completion: nil)
-//        }
-//        else {
-//            let alerta = UIAlertController(title: "Error", message: "E-mail and password missing", preferredStyle: .Alert)
-//            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-//            
-//            alerta.addAction(okAction)
-//            
-//            self.presentViewController(alerta, animated: true, completion: nil)
-//        }
+        let nameTextField = UITextField()
+        nameTextField.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.05)
+        nameTextField.center.x = signUpView.popUpView.center.x*0.8
+        nameTextField.center.y = signUpView.popUpView.center.y * 0.4
+        nameTextField.placeholder = "Name"
+        nameTextField.backgroundColor = UIColor.whiteColor()
+        nameTextField.layer.cornerRadius = 4
+        nameTextField.layer.borderWidth = 1
+        nameTextField.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        nameTextField.textColor = UIColor.blackColor()
+        
+        let paddingView3 = UIView()
+        paddingView3.frame = CGRectMake(0, 0, 7, 0)
+        
+        nameTextField.leftView = paddingView3
+        nameTextField.leftViewMode = .Always
+        
+        signUpView.popUpView.addSubview(nameTextField)
+        
+        let emailTextField = UITextField()
+        emailTextField.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.05)
+        emailTextField.center.x = signUpView.popUpView.center.x*0.8
+        emailTextField.center.y = signUpView.popUpView.center.y * 0.55
+        emailTextField.placeholder = "E-mail"
+        emailTextField.backgroundColor = UIColor.whiteColor()
+        emailTextField.layer.cornerRadius = 4
+        emailTextField.layer.borderWidth = 1
+        emailTextField.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        emailTextField.textColor = UIColor.blackColor()
+        
+        let paddingView4 = UIView()
+        paddingView4.frame = CGRectMake(0, 0, 7, 0)
+        
+        emailTextField.leftView = paddingView4
+        emailTextField.leftViewMode = .Always
+        
+        signUpView.popUpView.addSubview(emailTextField)
+        
+        let passwordTextField2 = UITextField()
+        passwordTextField2.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.05)
+        passwordTextField2.center.x = signUpView.popUpView.center.x*0.8
+        passwordTextField2.center.y = signUpView.popUpView.center.y * 0.7
+        passwordTextField2.secureTextEntry = true
+        passwordTextField2.placeholder = "Password"
+        passwordTextField2.backgroundColor = UIColor.whiteColor()
+        passwordTextField2.layer.cornerRadius = 4
+        passwordTextField2.layer.borderWidth = 1
+        passwordTextField2.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        passwordTextField2.textColor = UIColor.blackColor()
+        
+        let paddingView5 = UIView()
+        paddingView5.frame = CGRectMake(0, 0, 7, 0)
+        
+        passwordTextField2.leftView = paddingView5
+        passwordTextField2.leftViewMode = .Always
+        
+        signUpView.popUpView.addSubview(passwordTextField2)
+        
+        let paisLabel = UILabel()
+        paisLabel.frame = CGRectMake(0, 0, signUpView.view.frame.size.width, signUpView.view.frame.size.height*0.4)
+        paisLabel.text = "Country"
+        paisLabel.center.x = signUpView.popUpView.center.x * 0.3
+        paisLabel.center.y = signUpView.popUpView.center.y * 0.85
+        paisLabel.textAlignment = NSTextAlignment.Center
+        paisLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        
+        signUpView.popUpView.addSubview(paisLabel)
+        
+        let countryPicker = UIPickerView()
+        countryPicker.delegate = self
+        countryPicker.dataSource = self
+        countryPicker.frame = CGRectMake(0, 0, signUpView.view.frame.width/1.5, signUpView.view.frame.height * 0.2)
+        countryPicker.center.x = signUpView.popUpView.center.x * 0.8
+        countryPicker.center.y = signUpView.popUpView.center.y * 1.05   
+        
+        signUpView.popUpView.addSubview(countryPicker)
+        
+        
+        signUpView.showInView(self.view)
+        
+        signUpView.nameTextField = nameTextField
+        signUpView.emailTextField = emailTextField
+        signUpView.passwordTextField = passwordTextField2
+        
     }
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.picker.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.picker[row]
+    }
     
     func loginAction() {
 
