@@ -23,15 +23,33 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         profileLabel.textAlignment = .Center
         profileLabel.text = "Profile"
         profileLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
-        
-        view.addSubview(profileLabel)
-        
+                
         let nameLabel = UILabel()
-        nameLabel.frame = CGRectMake(20, profileLabel.frame.origin.y + profileLabel.frame.height + 20, 150, 30)
+        nameLabel.frame = CGRectMake(30, profileLabel.frame.size.height + profileLabel.frame.origin.y + 20, self.view.frame.width/2, 40)
+        nameLabel.textAlignment = .Left
         nameLabel.text = "Name"
         nameLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
-        view.addSubview(nameLabel)
+        let imageName = "Brazil.png"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: nameLabel.frame.size.width + 80, y: nameLabel.frame.size.height + nameLabel.frame.origin.y - 35, width: 40, height: 30)
+                
+        let completedLabel = UILabel()
+        completedLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width, 40)
+        completedLabel.textAlignment = .Left
+        completedLabel.text = "0% of the album is completed"
+        completedLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        
+        let emailLabel = UILabel()
+        emailLabel.frame = CGRectMake(30, completedLabel.frame.size.height + completedLabel.frame.origin.y + 20, self.view.frame.width, 40)
+        emailLabel.textAlignment = .Left
+        emailLabel.text = "Email: maria@maria.com"
+        emailLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        
+        view.addSubview(imageView)
+        view.addSubview(profileLabel)
+
         
 //        // Get a reference to our posts
 //        var ref = Firebase(url:"https://hackpuc.firebaseio.com/")
@@ -49,6 +67,10 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         fbLoginButton.center.x = self.view.center.x
         
         self.view.addSubview(fbLoginButton)
+        view.addSubview(nameLabel)
+        view.addSubview(completedLabel)
+        view.addSubview(emailLabel)
+
     }
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
