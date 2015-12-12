@@ -131,10 +131,10 @@
 			children = (
 				D00BBACE1C1BC30B0084355F /* Modelo */,
 				0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */,
+				0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */,
 				3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */,
 				3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */,
 				3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */,
-				0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */,
 				0CBC5C371C1B8773006BEEFE /* Main.storyboard */,
 				0CBC5C3A1C1B8773006BEEFE /* Assets.xcassets */,
 				0CBC5C3C1C1B8773006BEEFE /* LaunchScreen.storyboard */,
