@@ -11,7 +11,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
 
     let userTextField = UITextField()
     let passwordTextField = UITextField()
@@ -102,6 +102,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.backgroundColor = UIColor(red:0.49, green:0.72, blue:0.24, alpha:1)
         
         let fbLoginButton = FBSDKLoginButton()
+        fbLoginButton.delegate = self
         fbLoginButton.frame.origin = CGPointMake(0, passwordLabel.frame.origin.y + passwordLabel.frame.height + 120)
         fbLoginButton.center.x = self.view.center.x
         
@@ -128,6 +129,47 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if (error == nil) && (result.isCancelled == false) {
+            
+            // TabBar Itens
+            let profileImage = UIImage(named: "profileItem")
+            let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
+            profileItem.selectedImage = profileImage
+            
+            let albumImage = UIImage(named: "cards")
+            let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
+            albumItem.selectedImage = albumImage
+            
+            let friendsImage = UIImage(named: "friendsItem")
+            let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
+            friendsItem.selectedImage = friendsImage
+            
+            
+            // TabBar
+            
+            let tabBarC = RoundedTabBarViewController()
+            let album = AlbumViewController()
+            album.tabBarItem = albumItem
+            let albumNav = UINavigationController(rootViewController: AlbumViewController())
+            albumNav.navigationBar.hidden = true
+            
+            let profile = ProfileViewController()
+            profile.tabBarItem = profileItem
+            let socialInterection = SocialInterectionViewController()
+            socialInterection.tabBarItem = friendsItem
+            
+            tabBarC.viewControllers = [profile, albumNav, socialInterection]
+            tabBarC.selectedIndex = 1
+            
+            self.presentViewController(tabBarC, animated: true, completion: nil)
+        }
     }
     
     func signUpPressed() {
