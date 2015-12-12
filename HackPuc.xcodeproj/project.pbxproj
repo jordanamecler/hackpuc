@@ -35,6 +35,7 @@
 		3F13890B1C1BF5B100EF3127 /* LondrinaSolid-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F1389061C1BF5B100EF3127 /* LondrinaSolid-Regular.otf */; };
 		3F13890D1C1BF72800EF3127 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13890C1C1BF72800EF3127 /* AlbumTableViewCell.swift */; };
 		3F1389101C1C49BA00EF3127 /* RankingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13890F1C1C49BA00EF3127 /* RankingBoxView.swift */; };
+		3F622AC71C1C723E00753FC1 /* GanharFigurinhasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
 		D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */ = {isa = PBXBuildFile; fileRef = D066453A1C1C06F2008BEB6B /* Atletas.plist */; };
@@ -98,6 +99,7 @@
 		3F1389061C1BF5B100EF3127 /* LondrinaSolid-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Regular.otf"; sourceTree = "<group>"; };
 		3F13890C1C1BF72800EF3127 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		3F13890F1C1C49BA00EF3127 /* RankingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingBoxView.swift; sourceTree = "<group>"; };
+		3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GanharFigurinhasViewController.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D066453A1C1C06F2008BEB6B /* Atletas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atletas.plist; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				0C255F911C1C743700978038 /* PopUpViewController.swift */,
 				3F1388FE1C1BF30E00EF3127 /* FigurinhaViewController.swift */,
 				3F1388FC1C1BE33200EF3127 /* RoundedTabBarViewController.swift */,
+				3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */,
 				3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */,
 				3F13890F1C1C49BA00EF3127 /* RankingBoxView.swift */,
 				3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */,
@@ -418,6 +421,7 @@
 				0C255F921C1C743700978038 /* PopUpViewController.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
 				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
+				3F622AC71C1C723E00753FC1 /* GanharFigurinhasViewController.swift in Sources */,
 				3F1388FF1C1BF30E00EF3127 /* FigurinhaViewController.swift in Sources */,
 				D06645441C1C06F2008BEB6B /* Equipe.swift in Sources */,
 				3F13890D1C1BF72800EF3127 /* AlbumTableViewCell.swift in Sources */,

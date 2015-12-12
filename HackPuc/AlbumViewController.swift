@@ -16,7 +16,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         let categoryLabel = UILabel()
-        categoryLabel.frame = CGRectMake(0, 40, 150, 30)
+        categoryLabel.frame = CGRectMake(0, 40, 150, 35)
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = "Categories"
