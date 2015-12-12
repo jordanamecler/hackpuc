@@ -15,12 +15,7 @@ class RoundedTabBarViewController: UITabBarController {
 
         // Green round button and tabBar
         
-        let greenTabBar = UIImageView(image: UIImage(named: "tabBar"))
-        greenTabBar.clipsToBounds = true
-        greenTabBar.frame.size = CGSizeMake(tabBar.frame.width, tabBar.frame.height)
-        greenTabBar.center = tabBar.center
-        greenTabBar.userInteractionEnabled = false
-        self.view.addSubview(greenTabBar)       
+        tabBar.backgroundImage = UIImage(named: "tabBar")
 
         let roundImage = UIImage(named: "tabItem")
         let roundedButton = UIImageView(image: roundImage)
@@ -29,6 +24,11 @@ class RoundedTabBarViewController: UITabBarController {
         roundedButton.center = CGPointMake(tabBar.center.x, tabBar.center.y - 10)
         roundedButton.userInteractionEnabled = false
         self.view.addSubview(roundedButton)
+        
+        let albumImage = UIImageView(image: UIImage(named: "cards"))
+        albumImage.center = CGPointMake(tabBar.center.x, tabBar.center.y - 10)
+        
+        self.view.addSubview(albumImage)
         
     }
 

@@ -13,7 +13,7 @@ class SocialInterectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .redColor()
+        self.view.backgroundColor = .whiteColor()
     }
 
     override func didReceiveMemoryWarning() {
