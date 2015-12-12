@@ -24,7 +24,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.view.addSubview(categoryLabel)
 
-        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width * 0.9, self.view.frame.height/1.2)
+        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width * 0.9, self.view.frame.height/1.3)
         categoriesTableView.center.x = self.view.center.x
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self

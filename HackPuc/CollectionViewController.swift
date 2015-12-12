@@ -31,6 +31,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = type
+        categoryLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 28)
         
         self.view.addSubview(categoryLabel)
         
@@ -38,7 +39,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 90, height: 120)
         
-        collectionView = UICollectionView(frame: CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 10, self.view.frame.width, self.view.frame.height/1.3), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 5, self.view.frame.width, self.view.frame.height/1.25), collectionViewLayout: layout)
         collectionView.center.x = self.view.center.x
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -48,6 +49,20 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
 
     }
 
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let figurinha = FigurinhaViewController()
+        
+        figurinha.cardIndex = indexPath.row + 1
+        figurinha.cardName = "Neymar Jr."
+        figurinha.cardImage = UIImage(named: "neymar")
+        figurinha.age = 23
+        figurinha.numberOfMedals = 0
+        figurinha.modalidade = "Futebol Masculino"
+        
+        
+        navigationController?.pushViewController(figurinha, animated: true)
+    }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 15
