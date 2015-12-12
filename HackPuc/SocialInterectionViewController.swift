@@ -27,6 +27,15 @@ class SocialInterectionViewController: UIViewController {
         let rankingBox = RankingBoxView()
         view.addSubview(rankingBox)
         
+        let ganharFigurinhasBox = UIView()
+        ganharFigurinhasBox.clipsToBounds = true
+        ganharFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
+        ganharFigurinhasBox.layer.borderWidth = 1
+        ganharFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 3, view.frame.height / 4)
+        ganharFigurinhasBox.frame.origin = CGPointMake(view.frame.width * 0.1, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
+        view.addSubview(ganharFigurinhasBox)
+        
+        
 
     }
 

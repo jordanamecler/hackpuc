@@ -11,13 +11,15 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     let userTextField = UITextField()
     let passwordTextField = UITextField()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         self.view.backgroundColor = UIColor(red:0.59, green:0.82, blue:0.35, alpha:1)
         
@@ -49,11 +51,12 @@ class LoginViewController: UIViewController {
         
         self.view.addSubview(userLabel)
         
-        userTextField.frame = CGRectMake(userLabel.frame.origin.x + userLabel.frame.width + 10, userLabel.frame.origin.y, self.view.frame.width/2, 40)
+        userTextField.frame = CGRectMake(userLabel.frame.origin.x + userLabel.frame.width + 10, userLabel.frame.origin.y, self.view.frame.width/2, 30)
         userTextField.layer.borderColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1).CGColor
-        
+        userTextField.backgroundColor = .whiteColor()
         userTextField.layer.borderWidth = 1
         userTextField.layer.cornerRadius = 10
+        userTextField.delegate = self
         
         let paddingView = UIView()
         paddingView.frame = CGRectMake(0, 0, 7, 0)
@@ -74,11 +77,13 @@ class LoginViewController: UIViewController {
         
         self.view.addSubview(passwordLabel)
         
-        passwordTextField.frame = CGRectMake(userTextField.frame.origin.x, passwordLabel.frame.origin.y, self.view.frame.width/2, 40)
+        passwordTextField.frame = CGRectMake(userTextField.frame.origin.x, passwordLabel.frame.origin.y, self.view.frame.width/2, 30)
         passwordTextField.layer.borderColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1).CGColor
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.secureTextEntry = true
+        passwordTextField.backgroundColor = .whiteColor()
+        passwordTextField.delegate = self
         
         let paddingView2 = UIView()
         paddingView2.frame = CGRectMake(0, 0, 7, 0)
@@ -158,6 +163,39 @@ class LoginViewController: UIViewController {
     
     
     func loginAction() {
+        
+        // TabBar Itens
+        let profileImage = UIImage(named: "profileItem")
+        let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
+        profileItem.selectedImage = profileImage
+        
+        let albumImage = UIImage(named: "cards")
+        let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
+        albumItem.selectedImage = albumImage
+        
+        let friendsImage = UIImage(named: "friendsItem")
+        let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
+        friendsItem.selectedImage = friendsImage
+        
+        
+        // TabBar
+        
+        let tabBarC = RoundedTabBarViewController()
+        let album = AlbumViewController()
+        album.tabBarItem = albumItem
+        let albumNav = UINavigationController(rootViewController: AlbumViewController())
+        albumNav.navigationBar.hidden = true
+        
+        let profile = ProfileViewController()
+        profile.tabBarItem = profileItem
+        let socialInterection = SocialInterectionViewController()
+        socialInterection.tabBarItem = friendsItem
+        
+        tabBarC.viewControllers = [profile, albumNav, socialInterection]
+        tabBarC.selectedIndex = 1
+        
+        self.presentViewController(tabBarC, animated: true, completion: nil)
+
         
         if userTextField.text != "" && passwordTextField.text != "" {
             Login().login(userTextField.text!, password: passwordTextField.text!)
@@ -245,6 +283,11 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 
