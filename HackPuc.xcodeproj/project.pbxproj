@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */; };
-		0CBC5C361C1B8773006BEEFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C351C1B8773006BEEFE /* ViewController.swift */; };
+		0CBC5C361C1B8773006BEEFE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */; };
 		0CBC5C391C1B8773006BEEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C371C1B8773006BEEFE /* Main.storyboard */; };
 		0CBC5C3B1C1B8773006BEEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C3A1C1B8773006BEEFE /* Assets.xcassets */; };
 		0CBC5C3E1C1B8773006BEEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C3C1C1B8773006BEEFE /* LaunchScreen.storyboard */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		0CBC5C301C1B8773006BEEFE /* HackPuc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPuc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CBC5C351C1B8773006BEEFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0CBC5C381C1B8773006BEEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CBC5C3A1C1B8773006BEEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CBC5C3D1C1B8773006BEEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			children = (
 				D00BBACE1C1BC30B0084355F /* Modelo */,
 				0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */,
-				0CBC5C351C1B8773006BEEFE /* ViewController.swift */,
+				0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */,
 				0CBC5C371C1B8773006BEEFE /* Main.storyboard */,
 				0CBC5C3A1C1B8773006BEEFE /* Assets.xcassets */,
 				0CBC5C3C1C1B8773006BEEFE /* LaunchScreen.storyboard */,
@@ -296,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00BBAD61C1BC4BB0084355F /* OlimpiadaAntiga.swift in Sources */,
-				0CBC5C361C1B8773006BEEFE /* ViewController.swift in Sources */,
+				0CBC5C361C1B8773006BEEFE /* LoginViewController.swift in Sources */,
 				D00BBAD41C1BC4950084355F /* Equipe.swift in Sources */,
 				D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
