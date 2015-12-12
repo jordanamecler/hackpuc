@@ -60,7 +60,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
             case 0:
                 menuCell.label?.text = "The Event"
                 menuCell.categoria = CategoriasAlbum.Evento
-                menuCell.percentageLabel.text = "0%"
+                menuCell.percentageLabel.text = "6%"
             case 1:
                 menuCell.label?.text = "Athletes"
                 menuCell.categoria = CategoriasAlbum.Atleta
@@ -138,6 +138,34 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let nextViewController = CollectionViewController()
         nextViewController.type = ((tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).label?.text)!
         nextViewController.categoria = (tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).categoria
+
+        if indexPath.section == 0 {
+            nextViewController.boolArray = album.olimpiadasAntigasArray
+        }
+        else if indexPath.section == 1 {
+            nextViewController.boolArray = album.atletaArray
+        }
+        else if indexPath.section == 2 {
+            nextViewController.boolArray = album.equipesArray
+        }
+        else if indexPath.section == 3 {
+            nextViewController.boolArray = album.modalidadeArray
+        }
+        else if indexPath.section == 4 {
+            nextViewController.boolArray = album.turismoArray
+        }
+        else if indexPath.section == 5 {
+            nextViewController.boolArray = album.olimpiadasAntigasArray
+        }
+
+
+        let transition = CATransition()
+        transition.duration = 0.5;
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade;
+        
+        self.view.layer.addAnimation(transition, forKey: nil)
+
         
         SystemStatus.sharedInstance.navController?.pushViewController(nextViewController, animated: false)
         

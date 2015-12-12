@@ -14,6 +14,8 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
     var categoria: CategoriasAlbum!
     var collectionView: UICollectionView!
     
+    var boolArray: Array<Bool>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,6 +93,14 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         cell.layer.borderColor = UIColor.grayColor().CGColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 10
+        
+        if boolArray[indexPath.row] == true {
+            cell.backgroundView = UIImageView(image: UIImage(named: "neymar"))
+        }
+        else {
+            cell.backgroundView = UIImageView(image: UIImage(named: "placeholder"))
+        }
+
         return cell
     }
     
