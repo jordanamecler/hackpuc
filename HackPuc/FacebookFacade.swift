@@ -11,13 +11,12 @@ import FBSDKCoreKit
 
 class FacebookFacade  {
     
-    var facebookId: String!
     var userName: String!
     var userEmail: String!
 
     
     init() {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath:  "me", parameters: nil)
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath:  "me", parameters: ["fields":"email,name"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             if ((error) != nil)
@@ -27,9 +26,10 @@ class FacebookFacade  {
             }
             else
             {
-                self.facebookId = result.valueForKey("id") as? String
                 self.userName = result.valueForKey("name") as? String
                 self.userEmail = result.valueForKey("email") as? String
+                
+                
                 
             }
         })
@@ -43,8 +43,5 @@ class FacebookFacade  {
         return userEmail
     }
     
-    func getFbId() -> String {
-        return facebookId
-    }
 
 }

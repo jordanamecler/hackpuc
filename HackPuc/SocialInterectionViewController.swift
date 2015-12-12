@@ -30,7 +30,7 @@ class SocialInterectionViewController: UIViewController {
         
         let ganharFigurinhasBox = UIButton()
         ganharFigurinhasBox.tag = 0
-        ganharFigurinhasBox.setImage( UIImage(named:"pacoteAberto"), forState: .Normal)
+        ganharFigurinhasBox.setImage( UIImage(named:"pacoteFechado"), forState: .Normal)
         ganharFigurinhasBox.clipsToBounds = true
         ganharFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         ganharFigurinhasBox.layer.borderWidth = 1
@@ -43,6 +43,7 @@ class SocialInterectionViewController: UIViewController {
         
         let trocarFigurinhasBox = UIButton()
         trocarFigurinhasBox.clipsToBounds = true
+        trocarFigurinhasBox.setImage(UIImage(named: "exc.png"), forState: .Normal)
         trocarFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         trocarFigurinhasBox.layer.borderWidth = 1
         trocarFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
@@ -55,7 +56,6 @@ class SocialInterectionViewController: UIViewController {
     
     func trocarAction() {
         
-
     }
 
 
@@ -72,15 +72,6 @@ class SocialInterectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
+
     
 }

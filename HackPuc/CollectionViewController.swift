@@ -20,10 +20,11 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.whiteColor()
+       
         
         let backButton = UIButton()
         backButton.frame = CGRectMake(10, 30, 20, 20)
-        backButton.setTitle("<", forState: .Normal)
+        backButton.setImage(UIImage(named: "backButton.png"), forState: .Normal)
         backButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
         backButton.addTarget(self, action: "backPressed", forControlEvents: .TouchUpInside)
         
@@ -40,7 +41,14 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 90, height: 120)
+        
+        if categoria == CategoriasAlbum.Equipe {
+            layout.itemSize = CGSize(width: 140, height: 90)
+        }
+        else {
+            layout.itemSize = CGSize(width: 90, height: 120)
+        }
+        
         
         collectionView = UICollectionView(frame: CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 5, self.view.frame.width, self.view.frame.height/1.25), collectionViewLayout: layout)
         collectionView.center.x = self.view.center.x
@@ -94,8 +102,20 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 10
         
+        var imageName: String!
+        
+        if categoria == CategoriasAlbum.Atleta {
+            imageName = "atleta"
+        }
+        else if categoria == CategoriasAlbum.Equipe {
+            imageName = "equipe"
+        }
+        else if categoria == CategoriasAlbum.Modalidade {
+            imageName = "modalidade"
+        }
+        
         if boolArray[indexPath.row] == true {
-            cell.backgroundView = UIImageView(image: UIImage(named: "neymar"))
+            cell.backgroundView = UIImageView(image: UIImage(named: "\(imageName)\(indexPath.row + 1)"))
         }
         else {
             cell.backgroundView = UIImageView(image: UIImage(named: "placeholder"))

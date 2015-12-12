@@ -58,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let tabBarC = RoundedTabBarViewController()
                 let album = AlbumViewController()
                 album.tabBarItem = albumItem
+                let albumNav = UINavigationController(rootViewController: album)
+                albumNav.navigationBar.hidden = true
                 
                 let profile = ProfileViewController()
                 profile.tabBarItem = profileItem
@@ -65,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let socialInterection = SocialInterectionViewController()
                 socialInterection.tabBarItem = friendsItem
                 
-                tabBarC.viewControllers = [profile, album, socialInterection]
+                tabBarC.viewControllers = [profile, albumNav, socialInterection]
                 tabBarC.selectedIndex = 1
                 
                 SystemStatus.sharedInstance.navController!.pushViewController(tabBarC, animated: false)
