@@ -12,16 +12,16 @@ import FBSDKLoginKit
 import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     let userTextField = UITextField()
     let passwordTextField = UITextField()
     var signUpView: PopUpViewController!
     var picker = ["Argentina", "Brasil", "United States"]
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         
         self.view.backgroundColor = UIColor(red:0.59, green:0.82, blue:0.35, alpha:1)
         
@@ -31,18 +31,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         logoImage.frame = CGRect(x: 0, y: 50, width: self.view.frame.width/2, height: self.view.frame.height/3)
         logoImage.center.x = self.view.center.x
         view.addSubview(logoImage)
-//        
-//        let logo = UILabel()
-//        logo.frame = CGRectMake(0, 100, 80, 30)
-//        logo.center.x = self.view.center.x
-//        logo.textAlignment = .Center
-//        logo.text = "LOGO"
-//        logo.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
-//
-//        self.view.addSubview(logo)
-        
-        let nav = UINavigationController(rootViewController: self)
-        nav.navigationBar.hidden = false
+        //
+        //        let logo = UILabel()
+        //        logo.frame = CGRectMake(0, 100, 80, 30)
+        //        logo.center.x = self.view.center.x
+        //        logo.textAlignment = .Center
+        //        logo.text = "LOGO"
+        //        logo.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        //        //  A FONTE FUNCIONOU DE PRIMEIRA PORRA É NOIS!
+        //
+        //        self.view.addSubview(logo)
         
         
         let userLabel = UILabel()
@@ -50,7 +48,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         userLabel.textAlignment = .Left
         userLabel.text = "Email"
         userLabel.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1)
-//        userLabel.sizeToFit()
+        //        userLabel.sizeToFit()
         userLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
         self.view.addSubview(userLabel)
@@ -67,7 +65,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         
         userTextField.leftView = paddingView
         userTextField.leftViewMode = .Always
-
+        
         
         self.view.addSubview(userTextField)
         
@@ -76,7 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         passwordLabel.textAlignment = .Left
         passwordLabel.text = "Password"
         passwordLabel.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1)
-//        passwordLabel.sizeToFit()
+        //        passwordLabel.sizeToFit()
         passwordLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
         self.view.addSubview(passwordLabel)
@@ -129,7 +127,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         signUpButton.addTarget(self, action: "signUpPressed", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(signUpButton)
-    
+        
         
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -142,7 +140,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if (error == nil) && (result.isCancelled == false) {
             
-           startApp()
+            startApp()
         }
     }
     
@@ -160,7 +158,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         signUpLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 28)
         
         signUpView.popUpView.addSubview(signUpLabel)
-
+        
         
         let nameTextField = UITextField()
         nameTextField.delegate = self
@@ -238,7 +236,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         countryPicker.dataSource = self
         countryPicker.frame = CGRectMake(0, 0, signUpView.view.frame.width/1.5, signUpView.view.frame.height * 0.2)
         countryPicker.center.x = signUpView.popUpView.center.x * 0.8
-        countryPicker.center.y = signUpView.popUpView.center.y * 1.05   
+        countryPicker.center.y = signUpView.popUpView.center.y * 1.05
         
         signUpView.popUpView.addSubview(countryPicker)
         
@@ -264,7 +262,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
     
     func loginAction() {
-
+        
         
         if userTextField.text != "" && passwordTextField.text != "" {
             Login().login(userTextField.text!, password: passwordTextField.text!)
@@ -299,7 +297,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             alerta.addAction(okAction)
             
             self.presentViewController(alerta, animated: true, completion: nil)
-
+            
         }
         else if passwordTextField.text != "" {
             let alerta = UIAlertController(title: "Error", message: "E-mail missing", preferredStyle: .Alert)
@@ -360,10 +358,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         tabBarC.viewControllers = [profileNav, albumNav, socialNav]
         tabBarC.selectedIndex = 1
         
-        self.navigationController?.pushViewController(tabBarNav, animated: true)
+        self.presentViewController(tabBarNav, animated: true, completion: nil)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -373,7 +371,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         textField.resignFirstResponder()
         return true
     }
-
-
+    
+    
 }
 
