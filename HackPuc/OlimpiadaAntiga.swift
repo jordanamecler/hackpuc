@@ -10,8 +10,18 @@ import Foundation
 
 class OlimpiadaAntiga {
     
-    var nome:String!
-    var ano:Int!
-    var desc:String!
-    var paisGanhador:String!
+    let nome:String!
+    let ano:Int!
+    let desc:String!
+    let paisGanhador:String!
+    
+    init (nome:String, ano:Int, desc:String, paisGanhador:String) {
+    
+        self.nome = nome
+        self.ano = ano
+        self.desc = desc
+        self.paisGanhador = paisGanhador
+    }
+    
+    
 }
