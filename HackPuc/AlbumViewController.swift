@@ -24,7 +24,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.view.addSubview(categoryLabel)
 
-        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width * 0.9, self.view.frame.height/1.3)
+        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width * 0.9, self.view.frame.height/1.4)
         categoriesTableView.center.x = self.view.center.x
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
@@ -52,6 +52,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let menuCell = AlbumTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")//UITableViewCell()
         
         menuCell.backgroundColor = UIColor.clearColor()
+        menuCell.percentageLabel.text = "0%"
         
         switch indexPath.section {
             case 0:
@@ -67,10 +68,10 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 menuCell.label?.text = "Modalities"
                 menuCell.categoria = CategoriasAlbum.Modalidade
             case 4:
-                menuCell.label?.text = "Tourism"
+                menuCell.label?.text = "Rio de Janeiro"
                 menuCell.categoria = CategoriasAlbum.Turismo
             case 5:
-                menuCell.label?.text = "Past"
+                menuCell.label?.text = "Past Games"
                 menuCell.categoria = CategoriasAlbum.OlimpiadaAntiga
             
             default:
@@ -102,7 +103,13 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        if section == 0 {
+            return 1
+        }
+        else {
+            return 20
+        }
+        
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
