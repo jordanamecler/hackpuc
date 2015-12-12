@@ -42,6 +42,13 @@ class LoginViewController: UIViewController {
         userTextField.layer.borderWidth = 1
         userTextField.layer.cornerRadius = 10
         
+        let paddingView = UIView()
+        paddingView.frame = CGRectMake(0, 0, 7, 0)
+        
+        userTextField.leftView = paddingView
+        userTextField.leftViewMode = .Always
+
+        
         self.view.addSubview(userTextField)
         
         let passwordLabel = UILabel()
@@ -57,6 +64,12 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.secureTextEntry = true
+        
+        let paddingView2 = UIView()
+        paddingView2.frame = CGRectMake(0, 0, 7, 0)
+        
+        passwordTextField.leftView = paddingView2
+        passwordTextField.leftViewMode = .Always
         
         self.view.addSubview(passwordTextField)
         
@@ -97,46 +110,119 @@ class LoginViewController: UIViewController {
     }
     
     func signUpPressed() {
-        if userTextField.text != nil && passwordTextField.text != nil {
+        
+        if userTextField.text != "" && passwordTextField.text != "" {
             Login().signUp(userTextField.text!, password: passwordTextField.text!)
+        }
+        else if userTextField.text != "" {
+            let alerta = UIAlertController(title: "Error", message: "Password missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
+        else if passwordTextField.text != "" {
+            let alerta = UIAlertController(title: "Error", message: "E-mail missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
+        else {
+            let alerta = UIAlertController(title: "Error", message: "E-mail and password missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
         }
     }
     
     
     func loginAction() {
         
-        
-        // TabBar Itens
-        let profileImage = UIImage(named: "profileItem")
-        let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
-        profileItem.selectedImage = profileImage
-        
-        let albumImage = UIImage(named: "cards")
-        let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
-        albumItem.selectedImage = albumImage
-        
-        let friendsImage = UIImage(named: "friendsItem")
-        let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
-        friendsItem.selectedImage = friendsImage
-    
-        
-        // TabBar
-        
-        let tabBarC = RoundedTabBarViewController()
-        let album = AlbumViewController()
-        album.tabBarItem = albumItem
-        let albumNav = UINavigationController(rootViewController: AlbumViewController())
-        albumNav.navigationBar.hidden = true
+        if userTextField.text != "" && passwordTextField.text != "" {
+            Login().login(userTextField.text!, password: passwordTextField.text!)
+            
+            let ref = Firebase(url: "https://hackpuc.firebaseio.com/")
+            ref.observeAuthEventWithBlock({ authData in
+                if authData != nil {
+                    // user authenticated
+                    // TabBar Itens
+                    let profileImage = UIImage(named: "profileItem")
+                    let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
+                    profileItem.selectedImage = profileImage
+                    
+                    let albumImage = UIImage(named: "cards")
+                    let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
+                    albumItem.selectedImage = albumImage
+                    
+                    let friendsImage = UIImage(named: "friendsItem")
+                    let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
+                    friendsItem.selectedImage = friendsImage
+                    
+                    
+                    // TabBar
+                    
+                    let tabBarC = RoundedTabBarViewController()
+                    let album = AlbumViewController()
+                    album.tabBarItem = albumItem
+                    let albumNav = UINavigationController(rootViewController: AlbumViewController())
+                    albumNav.navigationBar.hidden = true
+                    
+                    let profile = ProfileViewController()
+                    profile.tabBarItem = profileItem
+                    let socialInterection = SocialInterectionViewController()
+                    socialInterection.tabBarItem = friendsItem
+                    
+                    tabBarC.viewControllers = [profile, albumNav, socialInterection]
+                    tabBarC.selectedIndex = 1
+                    
+                    self.presentViewController(tabBarC, animated: true, completion: nil)
+                    print(authData)
+                } else {
+                    // No user is signed in
+                    let alerta = UIAlertController(title: "Error", message: "E-mail and password don't match", preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    
+                    alerta.addAction(okAction)
+                    
+                    self.presentViewController(alerta, animated: true, completion: nil)
+                }
+            })
+            
+            
+            
+        }
+        else if userTextField.text != "" {
+            let alerta = UIAlertController(title: "Error", message: "Password missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
 
-        let profile = ProfileViewController()
-        profile.tabBarItem = profileItem
-        let socialInterection = SocialInterectionViewController()
-        socialInterection.tabBarItem = friendsItem
+        }
+        else if passwordTextField.text != "" {
+            let alerta = UIAlertController(title: "Error", message: "E-mail missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
+        else {
+            let alerta = UIAlertController(title: "Error", message: "E-mail and password missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
         
-        tabBarC.viewControllers = [profile, albumNav, socialInterection]
-        tabBarC.selectedIndex = 1
         
-        self.presentViewController(tabBarC, animated: true, completion: nil)
         
     }
 

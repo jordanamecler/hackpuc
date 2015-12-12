@@ -29,4 +29,20 @@ class Login {
                 }
         })
     }
+    
+    func login(email: String, password: String) {
+        let ref = Firebase(url: "https://hackpuc.firebaseio.com/")
+        ref.authUser(email, password: password,
+            withCompletionBlock: { error, authData in
+                
+                if error != nil {
+                    print("\(error)")
+                    // There was an error logging in to this account
+                } else {
+                    print("logou")
+                    // We are now logged in
+                }
+        })
+
+    }
 }
