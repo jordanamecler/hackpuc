@@ -10,8 +10,15 @@ import Foundation
 
 class Turismo {
     
-    var nome:String!
-    var desc:String!
+    let nome:String
+    let desc:String
 
-
+    
+    init (nome:String, desc:String) {
+    
+        self.nome = nome
+        self.desc = desc
+    }
+    
+    
 }

@@ -10,8 +10,17 @@ import Foundation
 
 class Equipe {
 
-    var pais:String!
-    var modalidade:String!
-    var medalhas:Int = 0
-    var integrantes:[String]!
+    let pais:String!
+    let modalidade:String!
+    let medalhas:Int
+    let integrantes:[String]!
+    
+    init (pais:String, modalidade:String, medalhas:Int, integrantes:[String]) {
+        self.pais = pais
+        self.modalidade = modalidade
+        self.medalhas = medalhas
+        self.integrantes = integrantes
+    }
+    
+    
 }

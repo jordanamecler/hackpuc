@@ -10,8 +10,14 @@ import Foundation
 
 class Modalidade {
     
-    var nome:String!
-    var historia:String!
+    let nome:String
+    let historia:String
+    
+    init (nome:String, historia:String) {
+    
+        self.nome = nome
+        self.historia = historia
+    }
     
     
 }
