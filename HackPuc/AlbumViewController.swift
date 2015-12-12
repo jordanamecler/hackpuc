@@ -11,9 +11,12 @@ import UIKit
 class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let categoriesTableView = UITableView()
+    var album: Album!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        album = DAOAlbuns().getBoolenDict()
         
         let categoryLabel = UILabel()
         categoryLabel.frame = CGRectMake(0, 40, 200, 38)
@@ -52,27 +55,72 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let menuCell = AlbumTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")//UITableViewCell()
         
         menuCell.backgroundColor = UIColor.clearColor()
-        menuCell.percentageLabel.text = "0%"
         
         switch indexPath.section {
             case 0:
                 menuCell.label?.text = "The Event"
                 menuCell.categoria = CategoriasAlbum.Evento
+                menuCell.percentageLabel.text = "0%"
             case 1:
                 menuCell.label?.text = "Athletes"
                 menuCell.categoria = CategoriasAlbum.Atleta
+                
+                var numOfTrue = 0
+                for i in album.atletaArray {
+                    if i == true {
+                        numOfTrue++
+                    }
+                }
+                
+                menuCell.percentageLabel.text = "\(numOfTrue * 100 / album.maxFigurinhasPorCat)%"
             case 2:
                 menuCell.label?.text = "Teams"
                 menuCell.categoria = CategoriasAlbum.Equipe
+                
+                var numOfTrue = 0
+                for i in album.equipesArray {
+                    if i == true {
+                        numOfTrue++
+                    }
+                }
+                
+                menuCell.percentageLabel.text = "\(numOfTrue * 100 / album.maxFigurinhasPorCat)%"
             case 3:
                 menuCell.label?.text = "Modalities"
                 menuCell.categoria = CategoriasAlbum.Modalidade
+
+                var numOfTrue = 0
+                for i in album.modalidadeArray {
+                    if i == true {
+                        numOfTrue++
+                    }
+                }
+                
+                menuCell.percentageLabel.text = "\(numOfTrue * 100 / album.maxFigurinhasPorCat)%"
             case 4:
                 menuCell.label?.text = "Rio de Janeiro"
                 menuCell.categoria = CategoriasAlbum.Turismo
+
+                var numOfTrue = 0
+                for i in album.turismoArray {
+                    if i == true {
+                        numOfTrue++
+                    }
+                }
+                
+                menuCell.percentageLabel.text = "\(numOfTrue * 100 / album.maxFigurinhasPorCat)%"
             case 5:
                 menuCell.label?.text = "Past Games"
                 menuCell.categoria = CategoriasAlbum.OlimpiadaAntiga
+                
+                var numOfTrue = 0
+                for i in album.olimpiadasAntigasArray {
+                    if i == true {
+                        numOfTrue++
+                    }
+                }
+                
+                menuCell.percentageLabel.text = "\(numOfTrue * 100 / album.maxFigurinhasPorCat)%"
             
             default:
                 break

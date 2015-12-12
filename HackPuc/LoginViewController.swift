@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         let userLabel = UILabel()
         userLabel.frame = CGRectMake(30, logoImage.frame.origin.y + logoImage.frame.height + 50, 80, 30)
         userLabel.textAlignment = .Left
-        userLabel.text = "Username"
+        userLabel.text = "Email"
         userLabel.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1)
 //        userLabel.sizeToFit()
         userLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
@@ -161,6 +161,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 
         
         let nameTextField = UITextField()
+        nameTextField.delegate = self
         nameTextField.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.05)
         nameTextField.center.x = signUpView.popUpView.center.x*0.8
         nameTextField.center.y = signUpView.popUpView.center.y * 0.4
@@ -180,6 +181,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         signUpView.popUpView.addSubview(nameTextField)
         
         let emailTextField = UITextField()
+        emailTextField.delegate = self
         emailTextField.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.05)
         emailTextField.center.x = signUpView.popUpView.center.x*0.8
         emailTextField.center.y = signUpView.popUpView.center.y * 0.55
@@ -199,6 +201,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         signUpView.popUpView.addSubview(emailTextField)
         
         let passwordTextField2 = UITextField()
+        passwordTextField2.delegate = self
         passwordTextField2.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.05)
         passwordTextField2.center.x = signUpView.popUpView.center.x*0.8
         passwordTextField2.center.y = signUpView.popUpView.center.y * 0.7

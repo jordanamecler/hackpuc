@@ -55,7 +55,7 @@ class SocialInterectionViewController: UIViewController {
     
     func trocarAction() {
         
-        
+
     }
 
 
