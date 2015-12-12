@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FBSDKLoginKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class ProfileViewController: UIViewController {
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: nameLabel.frame.size.width + 80, y: nameLabel.frame.size.height + nameLabel.frame.origin.y - 35, width: 40, height: 30)
-        
+                
         let completedLabel = UILabel()
         completedLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
@@ -47,12 +49,38 @@ class ProfileViewController: UIViewController {
         
         view.addSubview(imageView)
         view.addSubview(profileLabel)
+
+        
+//        // Get a reference to our posts
+//        var ref = Firebase(url:"https://hackpuc.firebaseio.com/")
+//        
+//        // Retrieve new posts as they are added to your database
+//        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+//            print(snapshot.value.objectForKey("author"))
+//            print(snapshot.value.objectForKey("title"))
+//        })
+//        
+        
+        let fbLoginButton = FBSDKLoginButton()
+        fbLoginButton.delegate = self
+        fbLoginButton.frame.origin = CGPointMake(0, nameLabel.frame.origin.y + nameLabel.frame.height + 120)
+        fbLoginButton.center.x = self.view.center.x
+        
+        self.view.addSubview(fbLoginButton)
         view.addSubview(nameLabel)
         view.addSubview(completedLabel)
         view.addSubview(emailLabel)
-        
+
     }
 
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
