@@ -6,7 +6,10 @@ class PopUpViewController: UIViewController
     
     var popUpView:UIView!
     var closeButton:UIButton!
-    
+    var signUpButton:UIButton!
+    var nameTextField = UITextField()
+    var emailTextField = UITextField()
+    var passwordTextField = UITextField()
     
     override func viewDidLoad()
     {
@@ -24,13 +27,37 @@ class PopUpViewController: UIViewController
         self.popUpView.layer.shadowOffset = CGSizeMake(0.0, 0.0)
         self.view.addSubview(popUpView)
         
-        self.closeButton = UIButton(frame: CGRectMake(self.popUpView.frame.size.width/2 - 30.0, self.popUpView.frame.height - 45.0, 60.0, 30.0))
+        self.closeButton = UIButton(frame: CGRectMake(self.popUpView.frame.size.width/2 - 30.0, self.popUpView.frame.height - 40.0, 60.0, 30.0))
         self.closeButton.setTitleColor(UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0), forState: UIControlState.Normal)
-        self.closeButton.setTitle("Fechar", forState: UIControlState.Normal)
+        self.closeButton.setTitle("Close", forState: UIControlState.Normal)
         self.closeButton.titleLabel?.textAlignment = NSTextAlignment.Center
         self.closeButton.addTarget(self, action: "closePopUp", forControlEvents: .TouchUpInside)
         self.popUpView.addSubview(closeButton)
         
+        self.signUpButton = UIButton(frame: CGRectMake(self.popUpView.frame.size.width/2 - 30.0, self.popUpView.frame.height - 60.0, 70.0, 30.0))
+        self.signUpButton.setTitleColor(UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0), forState: UIControlState.Normal)
+        self.signUpButton.setTitle("Sign Up", forState: UIControlState.Normal)
+        self.signUpButton.titleLabel?.textAlignment = NSTextAlignment.Center
+        self.signUpButton.addTarget(self, action: "signUpPressed", forControlEvents: .TouchUpInside)
+        self.popUpView.addSubview(signUpButton)
+        
+    }
+    
+    func signUpPressed() {
+        
+        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField   .text != "" {
+            Login().signUp(emailTextField.text!, password: passwordTextField.text!)
+            self.removeAnimated()
+            
+        }
+        else {
+            let alerta = UIAlertController(title: "Ooops", message: "There's something missing", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alerta.addAction(okAction)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
     }
     
     @IBAction func closePopUp()
