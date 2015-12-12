@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
         logo.center.x = self.view.center.x
         logo.textAlignment = .Center
         logo.text = "LOGO"
+        logo.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        //  A FONTE FUNCIONOU DE PRIMEIRA PORRA É NOIS!
         
         self.view.addSubview(logo)
         
@@ -97,15 +99,15 @@ class LoginViewController: UIViewController {
         
         // TabBar Itens
         let profileImage = UIImage(named: "profileItem")
-        let profileItem = UITabBarItem(title: "profile", image: profileImage, tag: 0)
+        let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
         profileItem.selectedImage = profileImage
         
         let albumImage = UIImage(named: "cards")
-        let albumItem = UITabBarItem(title: "album", image: albumImage, tag: 1)
+        let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
         albumItem.selectedImage = albumImage
         
         let friendsImage = UIImage(named: "friendsItem")
-        let friendsItem = UITabBarItem(title: "social", image: friendsImage , tag: 2)
+        let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
         friendsItem.selectedImage = friendsImage
     
         
@@ -114,12 +116,15 @@ class LoginViewController: UIViewController {
         let tabBarC = RoundedTabBarViewController()
         let album = AlbumViewController()
         album.tabBarItem = albumItem
+        let albumNav = UINavigationController(rootViewController: AlbumViewController())
+        albumNav.navigationBar.hidden = true
+
         let profile = ProfileViewController()
         profile.tabBarItem = profileItem
         let socialInterection = SocialInterectionViewController()
         socialInterection.tabBarItem = friendsItem
         
-        tabBarC.viewControllers = [profile, album, socialInterection]
+        tabBarC.viewControllers = [profile, albumNav, socialInterection]
         tabBarC.selectedIndex = 1
         
         self.presentViewController(tabBarC, animated: true, completion: nil)

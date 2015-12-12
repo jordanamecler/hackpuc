@@ -14,6 +14,15 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .whiteColor()
+        
+        let profileLabel = UILabel()
+        profileLabel.frame = CGRectMake(0, 40, 150, 30)
+        profileLabel.center.x = self.view.center.x
+        profileLabel.textAlignment = .Center
+        profileLabel.text = "Profile"
+        profileLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
+        
+        view.addSubview(profileLabel)
     }
 
     override func didReceiveMemoryWarning() {

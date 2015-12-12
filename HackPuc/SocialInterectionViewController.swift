@@ -14,6 +14,15 @@ class SocialInterectionViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .whiteColor()
+        
+        let socialLabel = UILabel()
+        socialLabel.frame = CGRectMake(0, 40, 150, 30)
+        socialLabel.center.x = self.view.center.x
+        socialLabel.textAlignment = .Center
+        socialLabel.text = "Social"
+        socialLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
+        
+        view.addSubview(socialLabel)
     }
 
     override func didReceiveMemoryWarning() {

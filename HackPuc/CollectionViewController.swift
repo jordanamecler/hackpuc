@@ -36,7 +36,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 90, height: 90)
+        layout.itemSize = CGSize(width: 90, height: 120)
         
         collectionView = UICollectionView(frame: CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 10, self.view.frame.width, self.view.frame.height/1.3), collectionViewLayout: layout)
         collectionView.center.x = self.view.center.x
@@ -62,7 +62,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     func backPressed() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     override func didReceiveMemoryWarning() {

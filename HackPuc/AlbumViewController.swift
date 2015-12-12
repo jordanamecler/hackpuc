@@ -20,20 +20,26 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = "Categories"
+        categoryLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
         
         self.view.addSubview(categoryLabel)
 
-        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width, self.view.frame.height/1.2)
+        categoriesTableView.frame = CGRectMake(0, categoryLabel.frame.origin.y + categoryLabel.frame.height + 20, self.view.frame.width * 0.9, self.view.frame.height/1.2)
         categoriesTableView.center.x = self.view.center.x
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
+        categoriesTableView.backgroundColor = .clearColor()
         
         self.view.addSubview(categoriesTableView)
         
-        self.view.backgroundColor = .blueColor()
+        self.view.backgroundColor = .whiteColor()
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 6
     }
     
@@ -43,31 +49,29 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let menuCell = UITableViewCell()
+        let menuCell = AlbumTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")//UITableViewCell()
         
         menuCell.backgroundColor = UIColor.clearColor()
         
-        switch indexPath.row {
+        switch indexPath.section {
             case 0:
-                menuCell.textLabel?.text = "The Event"
+                menuCell.label?.text = "The Event"
             case 1:
-                menuCell.textLabel?.text = "Athletes"
+                menuCell.label?.text = "Athletes"
             case 2:
-                menuCell.textLabel?.text = "Teams"
+                menuCell.label?.text = "Teams"
             case 3:
-                menuCell.textLabel?.text = "Modalities"
+                menuCell.label?.text = "Modalities"
             case 4:
-                menuCell.textLabel?.text = "Tourism"
+                menuCell.label?.text = "Tourism"
             case 5:
-                menuCell.textLabel?.text = "Past"
+                menuCell.label?.text = "Past"
             
             default:
                 break
         }
-
-        menuCell.textLabel?.font = UIFont(name: "Avenir-Medium", size: 18)
-        menuCell.textLabel?.textColor = UIColor.darkGrayColor()
         
+        menuCell.backgroundView = UIImageView(image: UIImage(named: "albumImg"))
         
         return menuCell
     }
@@ -75,7 +79,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let nextViewController = CollectionViewController()
-        nextViewController.type = (tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!
+        nextViewController.type = ((tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).label?.text)!
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
@@ -86,18 +90,20 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.view.layer.addAnimation(transition, forKey: nil)
         
-        self.presentViewController(nextViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
-    */
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView()
+        view.frame = CGRectMake(0, 0, view.frame.width * 0.9, view.frame.height / 4)
+        view.backgroundColor = .clearColor()
+        return view
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
