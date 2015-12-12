@@ -96,14 +96,15 @@ class LoginViewController: UIViewController {
         
         // TabBar
         
-        let tabBar = UITabBarController()
+        let tabBarC = RoundedTabBarViewController()
         let album = AlbumViewController()
         let profile = ProfileViewController()
         let socialInterection = SocialInterectionViewController()
+
         
-        tabBar.viewControllers = [album, profile, socialInterection]
+        tabBarC.viewControllers = [album, profile, socialInterection]
         
-        self.presentViewController(tabBar, animated: true, completion: nil)
+        self.presentViewController(tabBarC, animated: true, completion: nil)
         
     }
 

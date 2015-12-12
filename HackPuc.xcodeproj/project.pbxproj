@@ -17,6 +17,7 @@
 		3F1388F51C1BD27C00EF3127 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */; };
 		3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */; };
 		3F1388F91C1BD2A900EF3127 /* SocialInterectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */; };
+		3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1388FC1C1BE33200EF3127 /* RoundedTabBarViewController.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
 		D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBACF1C1BC47E0084355F /* Atleta.swift */; };
@@ -60,6 +61,7 @@
 		3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialInterectionViewController.swift; sourceTree = "<group>"; };
+		3F1388FC1C1BE33200EF3127 /* RoundedTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTabBarViewController.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D00BBACF1C1BC47E0084355F /* Atleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atleta.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				D00BBACE1C1BC30B0084355F /* Modelo */,
 				0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */,
 				3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */,
+				3F1388FC1C1BE33200EF3127 /* RoundedTabBarViewController.swift */,
 				3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */,
 				3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */,
 				0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */,
@@ -314,6 +317,7 @@
 				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
 				D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */,
 				D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */,
+				3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
