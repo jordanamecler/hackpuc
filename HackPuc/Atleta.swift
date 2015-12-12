@@ -7,3 +7,29 @@
 //
 
 import Foundation
+
+enum Possui {
+    case Nao
+    case Sim
+    case Brilhante
+}
+
+class Atleta {
+  
+    let nome:String
+    let pais:String
+    let idade:Int
+    let qtdMedalhas:Int
+    var possui = Possui.Nao
+    
+    init(nome:String, pais:String, idade:Int, qtdMedalhas:Int) {
+        self.nome = nome
+        self.pais = pais
+        self.idade = idade
+        self.qtdMedalhas = qtdMedalhas
+    }
+    
+    
+    
+    
+}

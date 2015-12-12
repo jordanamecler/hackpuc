@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class Turismo {
+    
+    var nome:String!
+    var desc:String!
+
+
+}

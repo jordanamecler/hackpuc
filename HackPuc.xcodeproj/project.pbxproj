@@ -28,11 +28,13 @@
 		3F13890D1C1BF72800EF3127 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13890C1C1BF72800EF3127 /* AlbumTableViewCell.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
-		D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBACF1C1BC47E0084355F /* Atleta.swift */; };
-		D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD11C1BC48B0084355F /* Modalidade.swift */; };
-		D00BBAD41C1BC4950084355F /* Equipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD31C1BC4950084355F /* Equipe.swift */; };
-		D00BBAD61C1BC4BB0084355F /* OlimpiadaAntiga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD51C1BC4BB0084355F /* OlimpiadaAntiga.swift */; };
-		D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD71C1BC4CF0084355F /* Turismo.swift */; };
+		D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */ = {isa = PBXBuildFile; fileRef = D066453A1C1C06F2008BEB6B /* Atletas.plist */; };
+		D06645421C1C06F2008BEB6B /* Atleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453B1C1C06F2008BEB6B /* Atleta.swift */; };
+		D06645431C1C06F2008BEB6B /* DAOAlbuns.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453C1C1C06F2008BEB6B /* DAOAlbuns.swift */; };
+		D06645441C1C06F2008BEB6B /* Equipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453D1C1C06F2008BEB6B /* Equipe.swift */; };
+		D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */; };
+		D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453F1C1C06F2008BEB6B /* Turismo.swift */; };
+		D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06645401C1C06F2008BEB6B /* Modalidade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,11 +82,13 @@
 		3F13890C1C1BF72800EF3127 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		D00BBACF1C1BC47E0084355F /* Atleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atleta.swift; sourceTree = "<group>"; };
-		D00BBAD11C1BC48B0084355F /* Modalidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modalidade.swift; sourceTree = "<group>"; };
-		D00BBAD31C1BC4950084355F /* Equipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equipe.swift; sourceTree = "<group>"; };
-		D00BBAD51C1BC4BB0084355F /* OlimpiadaAntiga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlimpiadaAntiga.swift; sourceTree = "<group>"; };
-		D00BBAD71C1BC4CF0084355F /* Turismo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turismo.swift; sourceTree = "<group>"; };
+		D066453A1C1C06F2008BEB6B /* Atletas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atletas.plist; sourceTree = "<group>"; };
+		D066453B1C1C06F2008BEB6B /* Atleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atleta.swift; sourceTree = "<group>"; };
+		D066453C1C1C06F2008BEB6B /* DAOAlbuns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOAlbuns.swift; sourceTree = "<group>"; };
+		D066453D1C1C06F2008BEB6B /* Equipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equipe.swift; sourceTree = "<group>"; };
+		D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlimpiadaAntiga.swift; sourceTree = "<group>"; };
+		D066453F1C1C06F2008BEB6B /* Turismo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turismo.swift; sourceTree = "<group>"; };
+		D06645401C1C06F2008BEB6B /* Modalidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modalidade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,13 +219,23 @@
 		D00BBACE1C1BC30B0084355F /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
-				D00BBACF1C1BC47E0084355F /* Atleta.swift */,
-				D00BBAD11C1BC48B0084355F /* Modalidade.swift */,
-				D00BBAD31C1BC4950084355F /* Equipe.swift */,
-				D00BBAD51C1BC4BB0084355F /* OlimpiadaAntiga.swift */,
-				D00BBAD71C1BC4CF0084355F /* Turismo.swift */,
+				D06645481C1C06F8008BEB6B /* Data */,
+				D066453B1C1C06F2008BEB6B /* Atleta.swift */,
+				D066453C1C1C06F2008BEB6B /* DAOAlbuns.swift */,
+				D066453D1C1C06F2008BEB6B /* Equipe.swift */,
+				D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */,
+				D066453F1C1C06F2008BEB6B /* Turismo.swift */,
+				D06645401C1C06F2008BEB6B /* Modalidade.swift */,
 			);
 			name = Modelo;
+			sourceTree = "<group>";
+		};
+		D06645481C1C06F8008BEB6B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D066453A1C1C06F2008BEB6B /* Atletas.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +349,7 @@
 				3F1389091C1BF5B100EF3127 /* LondrinaShadow-Regular.otf in Resources */,
 				3F13890A1C1BF5B100EF3127 /* LondrinaSketche-Regular.otf in Resources */,
 				3F1389081C1BF5B100EF3127 /* LondrinaOutline-Regular.otf in Resources */,
+				D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */,
 				0CBC5C391C1B8773006BEEFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,19 +375,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00BBAD61C1BC4BB0084355F /* OlimpiadaAntiga.swift in Sources */,
+				D06645421C1C06F2008BEB6B /* Atleta.swift in Sources */,
 				0CBC5C361C1B8773006BEEFE /* LoginViewController.swift in Sources */,
 				3F1388F91C1BD2A900EF3127 /* SocialInterectionViewController.swift in Sources */,
-				D00BBAD41C1BC4950084355F /* Equipe.swift in Sources */,
-				D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */,
 				3F1388F51C1BD27C00EF3127 /* AlbumViewController.swift in Sources */,
+				D06645431C1C06F2008BEB6B /* DAOAlbuns.swift in Sources */,
+				D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */,
+				D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
 				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
-				D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */,
 				3F1388FF1C1BF30E00EF3127 /* FigurinhaViewController.swift in Sources */,
-				D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */,
+				D06645441C1C06F2008BEB6B /* Equipe.swift in Sources */,
 				3F13890D1C1BF72800EF3127 /* AlbumTableViewCell.swift in Sources */,
 				0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */,
+				D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */,
 				3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

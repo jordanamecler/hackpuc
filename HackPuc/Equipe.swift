@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class Equipe {
+
+    var pais:String!
+    var modalidade:String!
+    var medalhas:Int = 0
+    var integrantes:[String]!
+}
