@@ -30,6 +30,9 @@ class RoundedTabBarViewController: UITabBarController {
         
         self.view.addSubview(albumImage)
         
+        
+    
+                
     }
 
 
