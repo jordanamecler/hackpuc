@@ -13,16 +13,22 @@ class RoundedTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let roundedButton = UIButton()
-        roundedButton.backgroundColor = UIColor.grayColor()
+        // Green round button and tabBar
+        
+        let greenTabBar = UIImageView(image: UIImage(named: "tabBar"))
+        greenTabBar.clipsToBounds = true
+        greenTabBar.frame.size = CGSizeMake(tabBar.frame.width, tabBar.frame.height)
+        greenTabBar.center = tabBar.center
+        greenTabBar.userInteractionEnabled = false
+        self.view.addSubview(greenTabBar)       
+
+        let roundImage = UIImage(named: "tabItem")
+        let roundedButton = UIImageView(image: roundImage)
         roundedButton.clipsToBounds = true
-        roundedButton.layer.cornerRadius = 60
-        roundedButton.frame.size = CGSizeMake(120, 120)
-        roundedButton.center = self.tabBar.center
+        roundedButton.frame.size = (roundImage?.size)!
+        roundedButton.center = CGPointMake(tabBar.center.x, tabBar.center.y - 10)
         roundedButton.userInteractionEnabled = false
         self.view.addSubview(roundedButton)
-        
-
         
     }
 

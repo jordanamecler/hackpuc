@@ -94,15 +94,34 @@ class LoginViewController: UIViewController {
     
     func loginAction() {
         
+        
+        // TabBar Itens
+        let profileImage = UIImage(named: "profileItem")
+        let profileItem = UITabBarItem(title: nil, image: profileImage, tag: 0)
+        profileItem.selectedImage = profileImage
+        
+        let albumImage = UIImage(named: "cards")
+        let albumItem = UITabBarItem(title: nil, image: albumImage, tag: 1)
+        albumItem.selectedImage = albumImage
+        
+        let friendsItem = UITabBarItem(title: nil, image: UIImage(named: "friendsItem"), tag: 2)
+        
+    
+        
         // TabBar
         
         let tabBarC = RoundedTabBarViewController()
         let album = AlbumViewController()
+        album.tabBarItem = albumItem
         let profile = ProfileViewController()
+        profile.tabBarItem = profileItem
         let socialInterection = SocialInterectionViewController()
-
+        socialInterection.tabBarItem = friendsItem
         
-        tabBarC.viewControllers = [album, profile, socialInterection]
+    
+        
+        
+        tabBarC.viewControllers = [profile, album, socialInterection]
         
         self.presentViewController(tabBarC, animated: true, completion: nil)
         
