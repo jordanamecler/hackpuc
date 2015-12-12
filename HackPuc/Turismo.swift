@@ -12,12 +12,14 @@ class Turismo {
     
     let nome:String
     let desc:String
+    let index: Int
 
     
-    init (nome:String, desc:String) {
+    init (nome:String, desc:String, index: Int) {
     
         self.nome = nome
         self.desc = desc
+        self.index = index
     }
     
     

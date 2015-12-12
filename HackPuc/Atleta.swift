@@ -20,13 +20,16 @@ class Atleta {
     let pais:String
     let idade:Int
     let qtdMedalhas:Int
+    let index: Int
+    
     var possui = Possui.Nao
     
-    init(nome:String, pais:String, idade:Int, qtdMedalhas:Int) {
+    init(nome:String, pais:String, idade:Int, qtdMedalhas:Int, index: Int) {
         self.nome = nome
         self.pais = pais
         self.idade = idade
         self.qtdMedalhas = qtdMedalhas
+        self.index = index
     }
     
     

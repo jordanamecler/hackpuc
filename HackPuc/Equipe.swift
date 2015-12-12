@@ -14,12 +14,14 @@ class Equipe {
     let modalidade:String
     let medalhas:Int
     let integrantes:String
+    let index: Int
     
-    init (pais:String, modalidade:String, medalhas:Int, integrantes:String) {
+    init (pais:String, modalidade:String, medalhas:Int, integrantes:String, index: Int) {
         self.pais = pais
         self.modalidade = modalidade
         self.medalhas = medalhas
         self.integrantes = integrantes
+        self.index = index
     }
     
     

@@ -53,7 +53,7 @@ class DAOAlbuns {
         
         for dict in atletasDict! {
         
-            let atleta = Atleta(nome: dict.valueForKey("Nome") as! String, pais: dict.valueForKey("Pais") as! String, idade: dict.valueForKey("Idade") as! Int, qtdMedalhas: dict.valueForKey("QtdMedalhas") as! Int)
+            let atleta = Atleta(nome: dict.valueForKey("Nome") as! String, pais: dict.valueForKey("Pais") as! String, idade: dict.valueForKey("Idade") as! Int, qtdMedalhas: dict.valueForKey("QtdMedalhas") as! Int ,index: 0)
 
             let possui = dict.valueForKey("Possui") as! Int
             if possui == 1 {
@@ -67,14 +67,33 @@ class DAOAlbuns {
             atletasArray.append(atleta)
         
         }
-    
-    
-    
         return atletasArray
-    
     }
     
-    
-    
+    func getBoolenDict() -> Album {
+        
+        let plistPath = self.getPath("Atletas")
+        
+        let atletasDict = NSMutableArray(contentsOfFile: plistPath)
+        let boolDict = atletasDict![3] as! NSDictionary
+        
+        if boolDict.count == 0{
+            print("erro leitura bool array")
+        }
+        
+        let album = Album()
+
+        album.atletaArray = boolDict.valueForKey("atletaArray") as! [Bool]
+        album.equipesArray = boolDict.valueForKey("equipeArray") as! [Bool]
+        album.olimpiadasAntigasArray = boolDict.valueForKey("olimpiadaAntigaArray") as! [Bool]
+        album.turismoArray = boolDict.valueForKey("turismoArray") as! [Bool]
+        album.modalidadeArray = boolDict.valueForKey("modalidadeArray") as! [Bool]
+        
+        
+        return album
+            
+    }
     
 }
+
+    

@@ -55,24 +55,24 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         let figurinha = FigurinhaViewController()
         
         if categoria == CategoriasAlbum.Atleta {
-            figurinha.atleta = Atleta(nome: "Neymar Jr", pais: "Brazil", idade: 23, qtdMedalhas: 0)
+            figurinha.atleta = Atleta(nome: "Neymar Jr", pais: "Brazil", idade: 23, qtdMedalhas: 0,index: indexPath.row)
             figurinha.cardImage = UIImage(named: "neymar") 
         }
         else if categoria == CategoriasAlbum.Equipe {
-            figurinha.equipe = Equipe(pais: "Brasil", modalidade: "Futebol", medalhas: 5, integrantes: "Julio Cesar, Thiago Silva, Neymar")
+            figurinha.equipe = Equipe(pais: "Brasil", modalidade: "Futebol", medalhas: 5, integrantes: "Julio Cesar, Thiago Silva, Neymar",index: indexPath.row)
             figurinha.cardImage = UIImage(named: "equipebrasil")
         }
         else if categoria == CategoriasAlbum.Modalidade {
-            figurinha.modalidade = Modalidade(nome: "Judo", historia: "Essa historia do judo.")
+            figurinha.modalidade = Modalidade(nome: "Judo", historia: "Essa historia do judo.",index: indexPath.row)
             figurinha.cardImage = UIImage(named: "judo")
         
         }
         else if categoria == CategoriasAlbum.Turismo {
-            figurinha.turismo = Turismo(nome: "Maracana", desc: "É o estadio legal")
+            figurinha.turismo = Turismo(nome: "Maracana", desc: "É o estadio legal",index: indexPath.row)
             figurinha.cardImage = UIImage(named: "maracana")
         }
         else if categoria == CategoriasAlbum.OlimpiadaAntiga {
-            figurinha.antiga = OlimpiadaAntiga(nome: "Athens", ano: 2004, desc: "Foi legal pra caramba e teve gente pra caramba.", paisGanhador: "USA")
+            figurinha.antiga = OlimpiadaAntiga(nome: "Athens", ano: 2004, desc: "Foi legal pra caramba e teve gente pra caramba.", paisGanhador: "USA",index: indexPath.row)
             figurinha.cardImage = UIImage(named: "atenas")
         }
 

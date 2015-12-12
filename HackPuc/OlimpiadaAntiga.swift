@@ -14,13 +14,15 @@ class OlimpiadaAntiga {
     let ano:Int!
     let desc:String!
     let paisGanhador:String!
+    let index: Int
     
-    init (nome:String, ano:Int, desc:String, paisGanhador:String) {
+    init (nome:String, ano:Int, desc:String, paisGanhador:String, index: Int) {
     
         self.nome = nome
         self.ano = ano
         self.desc = desc
         self.paisGanhador = paisGanhador
+        self.index = index
     }
     
     

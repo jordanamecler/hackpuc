@@ -335,6 +335,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         // TabBar
         
         let tabBarC = RoundedTabBarViewController()
+        let tabBarNav = UINavigationController(rootViewController: tabBarC)
+        tabBarNav.navigationBar.hidden = true
         let album = AlbumViewController()
         album.tabBarItem = albumItem
         let albumNav = UINavigationController(rootViewController: album)
@@ -353,7 +355,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         tabBarC.viewControllers = [profileNav, albumNav, socialNav]
         tabBarC.selectedIndex = 1
         
-        self.presentViewController(tabBarC, animated: true, completion: nil)
+        self.presentViewController(tabBarNav, animated: true, completion: nil)
         
     }
 

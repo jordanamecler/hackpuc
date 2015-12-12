@@ -37,6 +37,7 @@
 		3F1389101C1C49BA00EF3127 /* RankingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13890F1C1C49BA00EF3127 /* RankingBoxView.swift */; };
 		3F622AC71C1C723E00753FC1 /* GanharFigurinhasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */; };
 		3F622AC91C1C9AAD00753FC1 /* FacebookFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */; };
+		3F622ACB1C1CA58500753FC1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622ACA1C1CA58500753FC1 /* Album.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
 		D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */ = {isa = PBXBuildFile; fileRef = D066453A1C1C06F2008BEB6B /* Atletas.plist */; };
@@ -104,6 +105,7 @@
 		3F13890F1C1C49BA00EF3127 /* RankingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingBoxView.swift; sourceTree = "<group>"; };
 		3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GanharFigurinhasViewController.swift; sourceTree = "<group>"; };
 		3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFacade.swift; sourceTree = "<group>"; };
+		3F622ACA1C1CA58500753FC1 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D066453A1C1C06F2008BEB6B /* Atletas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atletas.plist; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				D06645481C1C06F8008BEB6B /* Data */,
 				D066453B1C1C06F2008BEB6B /* Atleta.swift */,
 				D066453C1C1C06F2008BEB6B /* DAOAlbuns.swift */,
+				3F622ACA1C1CA58500753FC1 /* Album.swift */,
 				D066453D1C1C06F2008BEB6B /* Equipe.swift */,
 				D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */,
 				D066453F1C1C06F2008BEB6B /* Turismo.swift */,
@@ -427,6 +430,7 @@
 				3F1388F91C1BD2A900EF3127 /* SocialInterectionViewController.swift in Sources */,
 				3F1388F51C1BD27C00EF3127 /* AlbumViewController.swift in Sources */,
 				D06645431C1C06F2008BEB6B /* DAOAlbuns.swift in Sources */,
+				3F622ACB1C1CA58500753FC1 /* Album.swift in Sources */,
 				3F622AC91C1C9AAD00753FC1 /* FacebookFacade.swift in Sources */,
 				D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */,
 				D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */,

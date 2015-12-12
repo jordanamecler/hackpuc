@@ -12,11 +12,13 @@ class Modalidade {
     
     let nome:String
     let historia:String
+    let index: Int
     
-    init (nome:String, historia:String) {
+    init (nome:String, historia:String, index: Int) {
     
         self.nome = nome
         self.historia = historia
+        self.index = index
     }
     
     
