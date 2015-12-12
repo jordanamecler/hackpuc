@@ -156,11 +156,7 @@ class FigurinhaViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
 
 
 }
