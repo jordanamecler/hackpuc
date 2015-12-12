@@ -13,11 +13,11 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+    let userTextField = UITextField()
+    let passwordTextField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let ref = Firebase(url: "https://hackpuc.firebaseio.com/")
-        
         
         let logo = UILabel()
         logo.frame = CGRectMake(0, 100, 80, 30)
@@ -37,7 +37,6 @@ class LoginViewController: UIViewController {
         
         self.view.addSubview(userLabel)
         
-        let userTextField = UITextField()
         userTextField.frame = CGRectMake(userLabel.frame.origin.x + userLabel.frame.width + 10, userLabel.frame.origin.y, 150, 30)
         userTextField.layer.borderColor = UIColor.grayColor().CGColor
         userTextField.layer.borderWidth = 1
@@ -53,7 +52,6 @@ class LoginViewController: UIViewController {
         
         self.view.addSubview(passwordLabel)
         
-        let passwordTextField = UITextField()
         passwordTextField.frame = CGRectMake(userTextField.frame.origin.x, passwordLabel.frame.origin.y, 150, 30)
         passwordTextField.layer.borderColor = UIColor.grayColor().CGColor
         passwordTextField.layer.borderWidth = 1
@@ -89,12 +87,19 @@ class LoginViewController: UIViewController {
         signUpButton.layer.borderWidth = 1
         signUpButton.layer.borderColor = UIColor.grayColor().CGColor
         signUpButton.layer.cornerRadius = 10
+        signUpButton.addTarget(self, action: "signUpPressed", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(signUpButton)
     
         
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func signUpPressed() {
+        if userTextField.text != nil && passwordTextField.text != nil {
+            Login().signUp(userTextField.text!, password: passwordTextField.text!)
+        }
     }
     
     
