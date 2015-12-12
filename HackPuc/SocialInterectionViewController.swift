@@ -21,8 +21,13 @@ class SocialInterectionViewController: UIViewController {
         socialLabel.textAlignment = .Center
         socialLabel.text = "Social"
         socialLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
-        
         view.addSubview(socialLabel)
+        
+        
+        let rankingBox = RankingBoxView()
+        view.addSubview(rankingBox)
+        
+
     }
 
     override func didReceiveMemoryWarning() {
