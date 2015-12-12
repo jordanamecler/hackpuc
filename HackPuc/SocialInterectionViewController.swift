@@ -28,6 +28,8 @@ class SocialInterectionViewController: UIViewController {
         view.addSubview(rankingBox)
         
         let ganharFigurinhasBox = UIButton()
+        ganharFigurinhasBox.tag = 0
+        ganharFigurinhasBox.setImage( UIImage(named:"pacoteAberto"), forState: .Normal)
         ganharFigurinhasBox.clipsToBounds = true
         ganharFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         ganharFigurinhasBox.layer.borderWidth = 1
@@ -35,6 +37,8 @@ class SocialInterectionViewController: UIViewController {
         ganharFigurinhasBox.frame.origin = CGPointMake(rankingBox.frame.origin.x, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
         ganharFigurinhasBox.addTarget(self , action: Selector("ganharAction"), forControlEvents: .TouchUpInside)
         view.addSubview(ganharFigurinhasBox)
+        
+
         
         let trocarFigurinhasBox = UIButton()
         trocarFigurinhasBox.clipsToBounds = true
@@ -46,6 +50,7 @@ class SocialInterectionViewController: UIViewController {
         view.addSubview(trocarFigurinhasBox)
         
     }
+
     
     func trocarAction() {
         

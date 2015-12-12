@@ -12,6 +12,7 @@ class AlbumTableViewCell: UITableViewCell {
 
     var label: UILabel!
     var categoria: CategoriasAlbum!
+    var percentageLabel: UILabel!
     
     let cellWidth = UIScreen.mainScreen().bounds.width * 0.9
     let cellHeight = UIScreen.mainScreen().bounds.height / 4
@@ -30,12 +31,21 @@ class AlbumTableViewCell: UITableViewCell {
         
         label = UILabel()
         label.frame.size = CGSizeMake( cellWidth / 2  , self.frame.width / 6)
-        label.center = CGPointMake( cellWidth / 2, cellHeight / 2)
+        label.center = CGPointMake( cellWidth / 2, cellHeight / 2.8)
         label.textAlignment = .Center
         label.textColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
         label.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
         self.addSubview(label)
         self.selectionStyle = UITableViewCellSelectionStyle.None
+
+        percentageLabel = UILabel()
+        percentageLabel.frame.size = CGSizeMake( cellWidth / 2  , self.frame.width / 6)
+        percentageLabel.center = CGPointMake( cellWidth / 2, cellHeight / 1.6)
+        percentageLabel.textAlignment = .Center
+        percentageLabel.textColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
+        percentageLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
+    
+        self.addSubview(percentageLabel)
         
     }
     
