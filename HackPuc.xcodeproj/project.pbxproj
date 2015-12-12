@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C95D7271C1BBF6600B43C43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95D7261C1BBF6600B43C43 /* FBSDKCoreKit.framework */; };
-		0C95D7291C1BBF7900B43C43 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C95D7281C1BBF7900B43C43 /* FBSDKLoginKit.framework */; };
 		0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */; };
 		0CBC5C361C1B8773006BEEFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C351C1B8773006BEEFE /* ViewController.swift */; };
 		0CBC5C391C1B8773006BEEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C371C1B8773006BEEFE /* Main.storyboard */; };
@@ -16,6 +14,13 @@
 		0CBC5C3E1C1B8773006BEEFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C3C1C1B8773006BEEFE /* LaunchScreen.storyboard */; };
 		0CBC5C491C1B8773006BEEFE /* HackPucTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C481C1B8773006BEEFE /* HackPucTests.swift */; };
 		0CBC5C541C1B8773006BEEFE /* HackPucUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C531C1B8773006BEEFE /* HackPucUITests.swift */; };
+		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
+		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
+		D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBACF1C1BC47E0084355F /* Atleta.swift */; };
+		D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD11C1BC48B0084355F /* Modalidade.swift */; };
+		D00BBAD41C1BC4950084355F /* Equipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD31C1BC4950084355F /* Equipe.swift */; };
+		D00BBAD61C1BC4BB0084355F /* OlimpiadaAntiga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD51C1BC4BB0084355F /* OlimpiadaAntiga.swift */; };
+		D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00BBAD71C1BC4CF0084355F /* Turismo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C95D7261C1BBF6600B43C43 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		0C95D7281C1BBF7900B43C43 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0CBC5C301C1B8773006BEEFE /* HackPuc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPuc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBC5C351C1B8773006BEEFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,13 @@
 		0CBC5C4F1C1B8773006BEEFE /* HackPucUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackPucUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C531C1B8773006BEEFE /* HackPucUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackPucUITests.swift; sourceTree = "<group>"; };
 		0CBC5C551C1B8773006BEEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D00BBACF1C1BC47E0084355F /* Atleta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atleta.swift; sourceTree = "<group>"; };
+		D00BBAD11C1BC48B0084355F /* Modalidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modalidade.swift; sourceTree = "<group>"; };
+		D00BBAD31C1BC4950084355F /* Equipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equipe.swift; sourceTree = "<group>"; };
+		D00BBAD51C1BC4BB0084355F /* OlimpiadaAntiga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlimpiadaAntiga.swift; sourceTree = "<group>"; };
+		D00BBAD71C1BC4CF0084355F /* Turismo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turismo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C95D7291C1BBF7900B43C43 /* FBSDKLoginKit.framework in Frameworks */,
-				0C95D7271C1BBF6600B43C43 /* FBSDKCoreKit.framework in Frameworks */,
+				D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */,
+				D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +93,8 @@
 		0C95D7241C1BBBAE00B43C43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C95D7281C1BBF7900B43C43 /* FBSDKLoginKit.framework */,
-				0C95D7261C1BBF6600B43C43 /* FBSDKCoreKit.framework */,
+				D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */,
+				D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +123,7 @@
 		0CBC5C321C1B8773006BEEFE /* HackPuc */ = {
 			isa = PBXGroup;
 			children = (
+				D00BBACE1C1BC30B0084355F /* Modelo */,
 				0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */,
 				0CBC5C351C1B8773006BEEFE /* ViewController.swift */,
 				0CBC5C371C1B8773006BEEFE /* Main.storyboard */,
@@ -139,6 +150,18 @@
 				0CBC5C551C1B8773006BEEFE /* Info.plist */,
 			);
 			path = HackPucUITests;
+			sourceTree = "<group>";
+		};
+		D00BBACE1C1BC30B0084355F /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				D00BBACF1C1BC47E0084355F /* Atleta.swift */,
+				D00BBAD11C1BC48B0084355F /* Modalidade.swift */,
+				D00BBAD31C1BC4950084355F /* Equipe.swift */,
+				D00BBAD51C1BC4BB0084355F /* OlimpiadaAntiga.swift */,
+				D00BBAD71C1BC4CF0084355F /* Turismo.swift */,
+			);
+			name = Modelo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00BBAD61C1BC4BB0084355F /* OlimpiadaAntiga.swift in Sources */,
 				0CBC5C361C1B8773006BEEFE /* ViewController.swift in Sources */,
+				D00BBAD41C1BC4950084355F /* Equipe.swift in Sources */,
+				D00BBAD01C1BC47E0084355F /* Atleta.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
+				D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */,
+				D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = (
+					FacebookSDK,
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
 				INFOPLIST_FILE = HackPuc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPuc;
@@ -427,7 +458,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = (
+					FacebookSDK,
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
 				INFOPLIST_FILE = HackPuc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPuc;
