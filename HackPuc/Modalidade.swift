@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class Modalidade {
+    
+    var nome:String!
+    var historia:String!
+    
+    
+}

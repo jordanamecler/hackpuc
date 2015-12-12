@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class OlimpiadaAntiga {
+    
+    var nome:String!
+    var ano:Int!
+    var desc:String!
+    var paisGanhador:String!
+}
