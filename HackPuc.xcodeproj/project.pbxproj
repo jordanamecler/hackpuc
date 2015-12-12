@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C95D72A1C1BE02B00B43C43 /* CollectionViewController.swift */; };
 		0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */; };
 		0CBC5C361C1B8773006BEEFE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */; };
 		0CBC5C391C1B8773006BEEFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5C371C1B8773006BEEFE /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C95D72A1C1BE02B00B43C43 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0CBC5C301C1B8773006BEEFE /* HackPuc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPuc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */,
 				0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */,
 				3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */,
+				0C95D72A1C1BE02B00B43C43 /* CollectionViewController.swift */,
 				3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */,
 				3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */,
 				0CBC5C371C1B8773006BEEFE /* Main.storyboard */,
@@ -314,6 +317,7 @@
 				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
 				D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */,
 				D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */,
+				0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
