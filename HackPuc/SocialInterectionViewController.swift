@@ -9,10 +9,10 @@
 import UIKit
 
 class SocialInterectionViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = .whiteColor()
         
         let socialLabel = UILabel()
@@ -27,32 +27,52 @@ class SocialInterectionViewController: UIViewController {
         let rankingBox = RankingBoxView()
         view.addSubview(rankingBox)
         
-        let ganharFigurinhasBox = UIView()
+        let ganharFigurinhasBox = UIButton()
         ganharFigurinhasBox.clipsToBounds = true
         ganharFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         ganharFigurinhasBox.layer.borderWidth = 1
-        ganharFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 3, view.frame.height / 4)
-        ganharFigurinhasBox.frame.origin = CGPointMake(view.frame.width * 0.1, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
+        ganharFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
+        ganharFigurinhasBox.frame.origin = CGPointMake(rankingBox.frame.origin.x, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
+        ganharFigurinhasBox.addTarget(self , action: Selector("ganharAction"), forControlEvents: .TouchUpInside)
         view.addSubview(ganharFigurinhasBox)
         
+        let trocarFigurinhasBox = UIButton()
+        trocarFigurinhasBox.clipsToBounds = true
+        trocarFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
+        trocarFigurinhasBox.layer.borderWidth = 1
+        trocarFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
+        trocarFigurinhasBox.frame.origin = CGPointMake(rankingBox.frame.origin.x + rankingBox.frame.width - trocarFigurinhasBox.frame.width, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
+        trocarFigurinhasBox.addTarget(self , action: Selector("trocarAction"), forControlEvents: .TouchUpInside)
+        view.addSubview(trocarFigurinhasBox)
         
-
     }
-
+    
+    func trocarAction() {
+        
+        
+    }
+    
+    func ganharAction() {
+        
+        print("ganhar")
+        let ganhar = GanharFigurinhasViewController()
+        self.navigationController?.pushViewController(ganhar, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
