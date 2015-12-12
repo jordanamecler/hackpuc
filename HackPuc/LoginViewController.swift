@@ -9,11 +9,15 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ref = Firebase(url: "https://hackpuc.firebaseio.com/")
+        
         
         let logo = UILabel()
         logo.frame = CGRectMake(0, 100, 80, 30)
