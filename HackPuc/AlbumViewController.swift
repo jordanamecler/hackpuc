@@ -56,16 +56,22 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         switch indexPath.section {
             case 0:
                 menuCell.label?.text = "The Event"
+                menuCell.categoria = CategoriasAlbum.Evento
             case 1:
                 menuCell.label?.text = "Athletes"
+                menuCell.categoria = CategoriasAlbum.Atleta
             case 2:
                 menuCell.label?.text = "Teams"
+                menuCell.categoria = CategoriasAlbum.Equipe
             case 3:
                 menuCell.label?.text = "Modalities"
+                menuCell.categoria = CategoriasAlbum.Modalidade
             case 4:
                 menuCell.label?.text = "Tourism"
+                menuCell.categoria = CategoriasAlbum.Turismo
             case 5:
                 menuCell.label?.text = "Past"
+                menuCell.categoria = CategoriasAlbum.OlimpiadaAntiga
             
             default:
                 break
@@ -78,11 +84,13 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let nextViewController = CollectionViewController()
-        nextViewController.type = ((tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).label?.text)!
-        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        let nextViewController = CollectionViewController()
+        nextViewController.type = ((tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).label?.text)!
+        nextViewController.categoria = (tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).categoria
+            
+
         let transition = CATransition()
         transition.duration = 0.5;
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)

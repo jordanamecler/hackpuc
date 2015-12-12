@@ -11,6 +11,8 @@ import UIKit
 class AlbumTableViewCell: UITableViewCell {
 
     var label: UILabel!
+    var categoria: CategoriasAlbum!
+    
     let cellWidth = UIScreen.mainScreen().bounds.width * 0.9
     let cellHeight = UIScreen.mainScreen().bounds.height / 4
     

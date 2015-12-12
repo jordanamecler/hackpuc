@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum CategoriasAlbum {
+    case Equipe
+    case Atleta
+    case OlimpiadaAntiga
+    case Turismo
+    case Modalidade
+    case Evento
+}
 
 class DAOAlbuns {
     

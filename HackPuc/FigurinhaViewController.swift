@@ -12,16 +12,18 @@ class FigurinhaViewController: UIViewController {
 
     var cardImage: UIImage!
     var cardIndex: Int!
-    var cardName: String!
-    var age: Int?
-    var numberOfMedals: Int!
-    var modalidade: String!
+
+    var atleta: Atleta?
+    var equipe: Equipe?
+    var antiga: OlimpiadaAntiga?
+    var turismo: Turismo?
+    var modalidade: Modalidade?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .whiteColor()
         
+        view.backgroundColor = .whiteColor()
         
         let backButton = UIButton()
         backButton.frame = CGRectMake(10, 30, 20, 20)
@@ -29,8 +31,6 @@ class FigurinhaViewController: UIViewController {
         backButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
         backButton.addTarget(self, action: "backPressed", forControlEvents: .TouchUpInside)
         view.addSubview(backButton)
-        
-        // Info da figurinha
         
         let cardNumberLabel = UILabel()
         cardNumberLabel.text = "#\(cardIndex)"
@@ -46,48 +46,48 @@ class FigurinhaViewController: UIViewController {
         cardImageView.center = CGPointMake(view.frame.width  / 2, view.frame.height * 0.35)
         view.addSubview(cardImageView)
         
-        let cardNameLabel = UILabel()
-        cardNameLabel.text = "Name: \(cardName)"
-        cardNameLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
-        cardNameLabel.frame = CGRectMake(cardImageView.frame.origin.x , cardImageView.frame.origin.y + cardImageView.frame.height + 10 ,view.frame.width * 0.6, 40)
-        view.addSubview(cardNameLabel)
         
-        var nextFrame: CGRect!
+        // + Info
         
-        // age é optional pq nem tudo tem idade
-        let ageLabel: UILabel?
-        if let age = age {
-            ageLabel = UILabel()
-            ageLabel!.text = "Age: \(age)"
-            ageLabel!.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
-            ageLabel!.frame = CGRectMake(cardNameLabel.frame.origin.x , cardNameLabel.frame.origin.y + cardNameLabel.frame.height ,view.frame.width * 0.6, 40)
-            view.addSubview(ageLabel!)
-            nextFrame = CGRectMake(ageLabel!.frame.origin.x , ageLabel!.frame.origin.y + ageLabel!.frame.height ,view.frame.width * 0.6, 40)
+        if let atleta = atleta {
+            
+            let cardNameLabel = UILabel()
+            cardNameLabel.text = "Name: \(atleta.nome)"
+            cardNameLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            cardNameLabel.frame = CGRectMake(cardImageView.frame.origin.x , cardImageView.frame.origin.y + cardImageView.frame.height + 10 ,view.frame.width * 0.6, 40)
+            view.addSubview(cardNameLabel)
+        
+           let ageLabel = UILabel()
+            ageLabel.text = "Age: \(atleta.idade)"
+            ageLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            ageLabel.frame = CGRectMake(cardNameLabel.frame.origin.x , cardNameLabel.frame.origin.y + cardNameLabel.frame.height ,view.frame.width * 0.6, 40)
+            view.addSubview(ageLabel)
+            
+            let medalsLabel = UILabel()
+            if atleta.qtdMedalhas == 1 {
+                medalsLabel.text = "\(atleta.qtdMedalhas) medal"
+            }
+            else {
+                medalsLabel.text = "\(atleta.qtdMedalhas) medals"
+            }
+            medalsLabel.frame = CGRectMake(ageLabel.frame.origin.x, ageLabel.frame.origin.y + ageLabel.frame.height, ageLabel.frame.width, ageLabel.frame.height)
+            medalsLabel.text = "\(atleta.qtdMedalhas) medals"
+            medalsLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
+            view.addSubview(medalsLabel)
+            
         }
-        else {
-            nextFrame = CGRectMake(cardNameLabel.frame.origin.x , cardNameLabel.frame.origin.y + cardNameLabel.frame.height ,view.frame.width * 0.6, 40)
+        else if let equipe = equipe {
+            
         }
-        
-        let medalsLabel = UILabel()
-        if numberOfMedals == 1 {
-            medalsLabel.text = "\(numberOfMedals) medal"
+        else if let antiga = antiga {
+            
         }
-        else {
-            medalsLabel.text = "\(numberOfMedals) medals"
+        else if let turismo = turismo {
+            
         }
-        medalsLabel.frame = nextFrame
-        medalsLabel.text = "\(numberOfMedals) medals"
-        medalsLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
-        view.addSubview(medalsLabel)
-        
-        let modalidadeLabel = UILabel()
-        modalidadeLabel.text = "\(modalidade)"
-        modalidadeLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 22)
-        modalidadeLabel.frame = CGRectMake(nextFrame.origin.x , nextFrame.origin.y + medalsLabel.frame.height, nextFrame.width, 40)
-        view.addSubview(modalidadeLabel)
-        
-
-        
+        else if let modalidade = modalidade {
+            
+        }
         
     }
 

@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var type = String()
+    var categoria: CategoriasAlbum!
     var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -53,12 +54,12 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         
         let figurinha = FigurinhaViewController()
         
+        if categoria == CategoriasAlbum.Atleta {
+            figurinha.atleta = Atleta(nome: "Neymar Jr", pais: "Brazil", idade: 23, qtdMedalhas: 0)
+            figurinha.cardImage = UIImage(named: "neymar") 
+        }
+
         figurinha.cardIndex = indexPath.row + 1
-        figurinha.cardName = "Neymar Jr."
-        figurinha.cardImage = UIImage(named: "neymar")
-        figurinha.age = 23
-        figurinha.numberOfMedals = 0
-        figurinha.modalidade = "Futebol Masculino"
         
         
         navigationController?.pushViewController(figurinha, animated: true)
