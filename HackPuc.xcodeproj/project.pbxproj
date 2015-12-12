@@ -320,11 +320,8 @@
 				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
 				D00BBAD81C1BC4CF0084355F /* Turismo.swift in Sources */,
 				D00BBAD21C1BC48B0084355F /* Modalidade.swift in Sources */,
-<<<<<<< HEAD
 				0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */,
-=======
 				3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */,
->>>>>>> ce9ebea346d8c2a9bcbe014e619f084b86bd55c0
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
