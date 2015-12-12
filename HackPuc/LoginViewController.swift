@@ -15,6 +15,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 
     let userTextField = UITextField()
     let passwordTextField = UITextField()
+    var signUpView: PopUpViewController!
+
 
     
     override func viewDidLoad() {
@@ -174,33 +176,50 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     
     func signUpPressed() {
         
-        if userTextField.text != "" && passwordTextField.text != "" {
-            Login().signUp(userTextField.text!, password: passwordTextField.text!)
-        }
-        else if userTextField.text != "" {
-            let alerta = UIAlertController(title: "Error", message: "Password missing", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            
-            alerta.addAction(okAction)
-            
-            self.presentViewController(alerta, animated: true, completion: nil)
-        }
-        else if passwordTextField.text != "" {
-            let alerta = UIAlertController(title: "Error", message: "E-mail missing", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            
-            alerta.addAction(okAction)
-            
-            self.presentViewController(alerta, animated: true, completion: nil)
-        }
-        else {
-            let alerta = UIAlertController(title: "Error", message: "E-mail and password missing", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            
-            alerta.addAction(okAction)
-            
-            self.presentViewController(alerta, animated: true, completion: nil)
-        }
+        signUpView = PopUpViewController()
+        
+        
+        let termos = UILabel()
+        termos.frame = CGRectMake(0, 0, signUpView.view.frame.size.width*0.725, signUpView.view.frame.size.height*0.8)
+        termos.center.x = signUpView.popUpView.center.x*0.8
+        termos.center.y = signUpView.popUpView.center.y * 0.7
+        termos.textAlignment = NSTextAlignment.Center
+        termos.numberOfLines = 6
+        termos.text = "Não nos responsabilizamos pelas histórias publicadas neste aplicativo. Cada história é de responsabilidade exclusiva do usuário que a publicou."
+        
+        signUpView.popUpView.addSubview(termos)
+        
+        signUpView.showInView(self.view)
+
+        
+//        
+//        if userTextField.text != "" && passwordTextField.text != "" {
+//            Login().signUp(userTextField.text!, password: passwordTextField.text!)
+//        }
+//        else if userTextField.text != "" {
+//            let alerta = UIAlertController(title: "Error", message: "Password missing", preferredStyle: .Alert)
+//            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+//            
+//            alerta.addAction(okAction)
+//            
+//            self.presentViewController(alerta, animated: true, completion: nil)
+//        }
+//        else if passwordTextField.text != "" {
+//            let alerta = UIAlertController(title: "Error", message: "E-mail missing", preferredStyle: .Alert)
+//            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+//            
+//            alerta.addAction(okAction)
+//            
+//            self.presentViewController(alerta, animated: true, completion: nil)
+//        }
+//        else {
+//            let alerta = UIAlertController(title: "Error", message: "E-mail and password missing", preferredStyle: .Alert)
+//            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+//            
+//            alerta.addAction(okAction)
+//            
+//            self.presentViewController(alerta, animated: true, completion: nil)
+//        }
     }
     
     
