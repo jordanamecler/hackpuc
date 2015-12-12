@@ -140,6 +140,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         nextViewController.categoria = (tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).categoria
         
         SystemStatus.sharedInstance.navController?.pushViewController(nextViewController, animated: false)
+        
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

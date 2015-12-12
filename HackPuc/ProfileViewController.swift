@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: nameLabel.frame.size.width + 80, y: nameLabel.frame.size.height + nameLabel.frame.origin.y - 35, width: 40, height: 30)
-                
+        
         let completedLabel = UILabel()
         completedLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
