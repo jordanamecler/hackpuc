@@ -19,7 +19,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-             
+        
+        if let window = self.window
+        {
+            
+            if FBSDKAccessToken.currentAccessToken() != nil {
+                
+                // TabBar Itens
+                let profileImage = UIImage(named: "profileItem")
+                let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
+                profileItem.selectedImage = profileImage
+                
+                let albumImage = UIImage(named: "cards")
+                let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
+                albumItem.selectedImage = albumImage
+                
+                let friendsImage = UIImage(named: "friendsItem")
+                let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
+                friendsItem.selectedImage = friendsImage
+                
+                
+                // TabBar
+                
+                let tabBarC = RoundedTabBarViewController()
+                let album = AlbumViewController()
+                album.tabBarItem = albumItem
+                let albumNav = UINavigationController(rootViewController: AlbumViewController())
+                albumNav.navigationBar.hidden = true
+                
+                let profile = ProfileViewController()
+                profile.tabBarItem = profileItem
+                let socialInterection = SocialInterectionViewController()
+                socialInterection.tabBarItem = friendsItem
+                
+                tabBarC.viewControllers = [profile, albumNav, socialInterection]
+                tabBarC.selectedIndex = 1
+
+                window.rootViewController = tabBarC
+                
+            }
+        }
         
         
         return true

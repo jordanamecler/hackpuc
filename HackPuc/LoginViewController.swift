@@ -163,38 +163,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     func loginAction() {
-        
-        // TabBar Itens
-        let profileImage = UIImage(named: "profileItem")
-        let profileItem = UITabBarItem(title: "Profile", image: profileImage, tag: 0)
-        profileItem.selectedImage = profileImage
-        
-        let albumImage = UIImage(named: "cards")
-        let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
-        albumItem.selectedImage = albumImage
-        
-        let friendsImage = UIImage(named: "friendsItem")
-        let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
-        friendsItem.selectedImage = friendsImage
-        
-        
-        // TabBar
-        
-        let tabBarC = RoundedTabBarViewController()
-        let album = AlbumViewController()
-        album.tabBarItem = albumItem
-        let albumNav = UINavigationController(rootViewController: AlbumViewController())
-        albumNav.navigationBar.hidden = true
-        
-        let profile = ProfileViewController()
-        profile.tabBarItem = profileItem
-        let socialInterection = SocialInterectionViewController()
-        socialInterection.tabBarItem = friendsItem
-        
-        tabBarC.viewControllers = [profile, albumNav, socialInterection]
-        tabBarC.selectedIndex = 1
-        
-        self.presentViewController(tabBarC, animated: true, completion: nil)
 
         
         if userTextField.text != "" && passwordTextField.text != "" {
@@ -236,6 +204,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     self.presentViewController(tabBarC, animated: true, completion: nil)
                     print(authData)
+                    
+                    
                 } else {
                     // No user is signed in
                     let alerta = UIAlertController(title: "Error", message: "E-mail and password don't match", preferredStyle: .Alert)
