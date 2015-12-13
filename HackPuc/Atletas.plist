@@ -136,5 +136,14 @@
 			<integer>1</integer>
 		</array>
 	</dict>
+	<dict>
+		<key>missaoDiaria</key>
+		<array>
+			<false/>
+			<false/>
+			<false/>
+			<false/>
+		</array>
+	</dict>
 </array>
 </plist>

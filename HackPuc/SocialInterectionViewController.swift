@@ -59,6 +59,8 @@ class SocialInterectionViewController: UIViewController {
     
     func trocarAction(button: UIButton) {
         
+        let trocar = AbrirPacotesViewControler()
+        self.navigationController?.pushViewController(trocar, animated: true)
        
     }
 

@@ -44,31 +44,31 @@ class DAOAlbuns {
         return plistPath
     }
     
-    func getAtletasAlbum()->[Atleta] {
-    
-        let plistPath = self.getPath("Atletas")
-        
-        let atletasDict = NSMutableArray(contentsOfFile:plistPath)
-        var atletasArray = [Atleta]()
-        
-        for dict in atletasDict! {
-        
-            let atleta = Atleta(nome: dict.valueForKey("Nome") as! String, pais: dict.valueForKey("Pais") as! String, idade: dict.valueForKey("Idade") as! Int, qtdMedalhas: dict.valueForKey("QtdMedalhas") as! Int ,index: 0)
-
-            let possui = dict.valueForKey("Possui") as! Int
-            if possui == 1 {
-                atleta.possui = .Sim
-            }
-            if possui == 2 {
-                atleta.possui = .Brilhante
-            }
-            
-            
-            atletasArray.append(atleta)
-        
-        }
-        return atletasArray
-    }
+//    func getAtletasAlbum()->[Atleta] {
+//    
+//        let plistPath = self.getPath("Atletas")
+//        
+//        let atletasDict = NSMutableArray(contentsOfFile:plistPath)
+//        var atletasArray = [Atleta]()
+//        
+//        for dict in atletasDict! {
+//        
+//            let atleta = Atleta(nome: dict.valueForKey("Nome") as! String, pais: dict.valueForKey("Pais") as! String, idade: dict.valueForKey("Idade") as! Int, qtdMedalhas: dict.valueForKey("QtdMedalhas") as! Int ,index: 0)
+//
+//            let possui = dict.valueForKey("Possui") as! Int
+//            if possui == 1 {
+//                atleta.possui = .Sim
+//            }
+//            if possui == 2 {
+//                atleta.possui = .Brilhante
+//            }
+//            
+//            
+//            atletasArray.append(atleta)
+//        
+//        }
+//        return atletasArray
+//    }
     
     func getBoolenDict() -> Album {
         
@@ -78,7 +78,7 @@ class DAOAlbuns {
         let boolDict = atletasDict![3] as! NSDictionary
         
         if boolDict.count == 0{
-            print("erro leitura bool array")
+            print("erro leitura int array")
         }
         
         let album = Album()
@@ -92,6 +92,19 @@ class DAOAlbuns {
         
         return album
             
+    }
+    
+     func saveAlbum(alb: Album) {
+        
+        let plistpath = self.getPath("Atletas")
+        let atletasDict = NSMutableArray(contentsOfFile: plistpath)
+        
+        let newDict: [String:Array<Int>] = ["equipeArray":alb.equipesArray,"atletaArray":alb.atletaArray,"olimpiadaAntigaArray":alb.olimpiadasAntigasArray,"turismoArray":alb.turismoArray,"modalidadeArray":alb.modalidadeArray]
+        
+        atletasDict![3] = newDict
+        
+        
+        atletasDict!.writeToFile(plistpath, atomically: true)
     }
     
 }

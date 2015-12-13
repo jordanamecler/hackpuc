@@ -39,6 +39,7 @@
 		3F622AC71C1C723E00753FC1 /* GanharFigurinhasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */; };
 		3F622AC91C1C9AAD00753FC1 /* FacebookFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */; };
 		3F622ACB1C1CA58500753FC1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622ACA1C1CA58500753FC1 /* Album.swift */; };
+		3F622ACD1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622ACC1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
 		D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */ = {isa = PBXBuildFile; fileRef = D066453A1C1C06F2008BEB6B /* Atletas.plist */; };
@@ -81,17 +82,17 @@
 		0C95D7341C1C2F2200B43C43 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0C95D7361C1C2F2900B43C43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0C95D7381C1C2F3100B43C43 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0CBC5C301C1B8773006BEEFE /* HackPuc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPuc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBC5C301C1B8773006BEEFE /* Stickerz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stickerz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C331C1B8773006BEEFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBC5C351C1B8773006BEEFE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0CBC5C381C1B8773006BEEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CBC5C3A1C1B8773006BEEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CBC5C3D1C1B8773006BEEFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CBC5C3F1C1B8773006BEEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CBC5C441C1B8773006BEEFE /* HackPucTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackPucTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBC5C441C1B8773006BEEFE /* Stickerz.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stickerz.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C481C1B8773006BEEFE /* HackPucTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackPucTests.swift; sourceTree = "<group>"; };
 		0CBC5C4A1C1B8773006BEEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CBC5C4F1C1B8773006BEEFE /* HackPucUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackPucUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CBC5C4F1C1B8773006BEEFE /* Stickerz.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stickerz.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC5C531C1B8773006BEEFE /* HackPucUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackPucUITests.swift; sourceTree = "<group>"; };
 		0CBC5C551C1B8773006BEEFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1388F41C1BD27C00EF3127 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GanharFigurinhasViewController.swift; sourceTree = "<group>"; };
 		3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFacade.swift; sourceTree = "<group>"; };
 		3F622ACA1C1CA58500753FC1 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3F622ACC1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbrirPacotesViewControler.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D066453A1C1C06F2008BEB6B /* Atletas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atletas.plist; sourceTree = "<group>"; };
@@ -189,9 +191,9 @@
 		0CBC5C311C1B8773006BEEFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CBC5C301C1B8773006BEEFE /* HackPuc.app */,
-				0CBC5C441C1B8773006BEEFE /* HackPucTests.xctest */,
-				0CBC5C4F1C1B8773006BEEFE /* HackPucUITests.xctest */,
+				0CBC5C301C1B8773006BEEFE /* Stickerz.app */,
+				0CBC5C441C1B8773006BEEFE /* Stickerz.xctest */,
+				0CBC5C4F1C1B8773006BEEFE /* Stickerz.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 				3F1388FC1C1BE33200EF3127 /* RoundedTabBarViewController.swift */,
 				3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */,
 				3F1388F81C1BD2A900EF3127 /* SocialInterectionViewController.swift */,
+				3F622ACC1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift */,
 				3F13890F1C1C49BA00EF3127 /* RankingBoxView.swift */,
 				3F1388F61C1BD29400EF3127 /* ProfileViewController.swift */,
 				0CBC5C371C1B8773006BEEFE /* Main.storyboard */,
@@ -297,9 +300,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CBC5C2F1C1B8773006BEEFE /* HackPuc */ = {
+		0CBC5C2F1C1B8773006BEEFE /* Stickerz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CBC5C581C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPuc" */;
+			buildConfigurationList = 0CBC5C581C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "Stickerz" */;
 			buildPhases = (
 				0CBC5C2C1C1B8773006BEEFE /* Sources */,
 				0CBC5C2D1C1B8773006BEEFE /* Frameworks */,
@@ -309,14 +312,14 @@
 			);
 			dependencies = (
 			);
-			name = HackPuc;
+			name = Stickerz;
 			productName = HackPuc;
-			productReference = 0CBC5C301C1B8773006BEEFE /* HackPuc.app */;
+			productReference = 0CBC5C301C1B8773006BEEFE /* Stickerz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0CBC5C431C1B8773006BEEFE /* HackPucTests */ = {
+		0CBC5C431C1B8773006BEEFE /* StickerzTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CBC5C5B1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPucTests" */;
+			buildConfigurationList = 0CBC5C5B1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "StickerzTests" */;
 			buildPhases = (
 				0CBC5C401C1B8773006BEEFE /* Sources */,
 				0CBC5C411C1B8773006BEEFE /* Frameworks */,
@@ -327,14 +330,14 @@
 			dependencies = (
 				0CBC5C461C1B8773006BEEFE /* PBXTargetDependency */,
 			);
-			name = HackPucTests;
+			name = StickerzTests;
 			productName = HackPucTests;
-			productReference = 0CBC5C441C1B8773006BEEFE /* HackPucTests.xctest */;
+			productReference = 0CBC5C441C1B8773006BEEFE /* Stickerz.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0CBC5C4E1C1B8773006BEEFE /* HackPucUITests */ = {
+		0CBC5C4E1C1B8773006BEEFE /* StickerzUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CBC5C5E1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPucUITests" */;
+			buildConfigurationList = 0CBC5C5E1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "StickerzUITests" */;
 			buildPhases = (
 				0CBC5C4B1C1B8773006BEEFE /* Sources */,
 				0CBC5C4C1C1B8773006BEEFE /* Frameworks */,
@@ -345,9 +348,9 @@
 			dependencies = (
 				0CBC5C511C1B8773006BEEFE /* PBXTargetDependency */,
 			);
-			name = HackPucUITests;
+			name = StickerzUITests;
 			productName = HackPucUITests;
-			productReference = 0CBC5C4F1C1B8773006BEEFE /* HackPucUITests.xctest */;
+			productReference = 0CBC5C4F1C1B8773006BEEFE /* Stickerz.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -373,7 +376,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CBC5C2B1C1B8773006BEEFE /* Build configuration list for PBXProject "HackPuc" */;
+			buildConfigurationList = 0CBC5C2B1C1B8773006BEEFE /* Build configuration list for PBXProject "Stickerz" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -386,9 +389,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CBC5C2F1C1B8773006BEEFE /* HackPuc */,
-				0CBC5C431C1B8773006BEEFE /* HackPucTests */,
-				0CBC5C4E1C1B8773006BEEFE /* HackPucUITests */,
+				0CBC5C2F1C1B8773006BEEFE /* Stickerz */,
+				0CBC5C431C1B8773006BEEFE /* StickerzTests */,
+				0CBC5C4E1C1B8773006BEEFE /* StickerzUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -443,6 +446,7 @@
 				0C255F921C1C743700978038 /* PopUpViewController.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
 				3F1388F71C1BD29400EF3127 /* ProfileViewController.swift in Sources */,
+				3F622ACD1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift in Sources */,
 				3F622AC71C1C723E00753FC1 /* GanharFigurinhasViewController.swift in Sources */,
 				3F1388FF1C1BF30E00EF3127 /* FigurinhaViewController.swift in Sources */,
 				D06645441C1C06F2008BEB6B /* Equipe.swift in Sources */,
@@ -478,12 +482,12 @@
 /* Begin PBXTargetDependency section */
 		0CBC5C461C1B8773006BEEFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CBC5C2F1C1B8773006BEEFE /* HackPuc */;
+			target = 0CBC5C2F1C1B8773006BEEFE /* Stickerz */;
 			targetProxy = 0CBC5C451C1B8773006BEEFE /* PBXContainerItemProxy */;
 		};
 		0CBC5C511C1B8773006BEEFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CBC5C2F1C1B8773006BEEFE /* HackPuc */;
+			target = 0CBC5C2F1C1B8773006BEEFE /* Stickerz */;
 			targetProxy = 0CBC5C501C1B8773006BEEFE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -602,7 +606,7 @@
 				INFOPLIST_FILE = HackPuc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPuc;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Stickerz;
 			};
 			name = Debug;
 		};
@@ -617,7 +621,7 @@
 				INFOPLIST_FILE = HackPuc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPuc;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Stickerz;
 			};
 			name = Release;
 		};
@@ -628,8 +632,8 @@
 				INFOPLIST_FILE = HackPucTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPucTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackPuc.app/HackPuc";
+				PRODUCT_NAME = Stickerz;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stickerz.app/Stickerz";
 			};
 			name = Debug;
 		};
@@ -640,8 +644,8 @@
 				INFOPLIST_FILE = HackPucTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPucTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackPuc.app/HackPuc";
+				PRODUCT_NAME = Stickerz;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stickerz.app/Stickerz";
 			};
 			name = Release;
 		};
@@ -651,7 +655,7 @@
 				INFOPLIST_FILE = HackPucUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPucUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Stickerz;
 				TEST_TARGET_NAME = HackPuc;
 				USES_XCTRUNNER = YES;
 			};
@@ -663,7 +667,7 @@
 				INFOPLIST_FILE = HackPucUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flo.HackPucUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Stickerz;
 				TEST_TARGET_NAME = HackPuc;
 				USES_XCTRUNNER = YES;
 			};
@@ -672,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CBC5C2B1C1B8773006BEEFE /* Build configuration list for PBXProject "HackPuc" */ = {
+		0CBC5C2B1C1B8773006BEEFE /* Build configuration list for PBXProject "Stickerz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBC5C561C1B8773006BEEFE /* Debug */,
@@ -681,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CBC5C581C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPuc" */ = {
+		0CBC5C581C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "Stickerz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBC5C591C1B8773006BEEFE /* Debug */,
@@ -690,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CBC5C5B1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPucTests" */ = {
+		0CBC5C5B1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "StickerzTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBC5C5C1C1B8773006BEEFE /* Debug */,
@@ -699,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CBC5C5E1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "HackPucUITests" */ = {
+		0CBC5C5E1C1B8773006BEEFE /* Build configuration list for PBXNativeTarget "StickerzUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CBC5C5F1C1B8773006BEEFE /* Debug */,
