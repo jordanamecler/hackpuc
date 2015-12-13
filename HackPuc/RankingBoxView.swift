@@ -32,7 +32,7 @@ class RankingBoxView: UIView, UITableViewDataSource, UITableViewDelegate {
         self.center = CGPointMake(screenWidth / 2, screenHeight * 0.35)
         self.clipsToBounds = true
         self.layer.borderColor = UIColor(red:0.57, green:0.76, blue:0.4, alpha:1) .CGColor//UIColor(red:0.16, green:0.17, blue:0.21, alpha:1).CGColor
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 5
         
         let title = UILabel()
         title.textAlignment = .Center

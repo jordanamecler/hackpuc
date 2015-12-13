@@ -41,7 +41,7 @@ class SocialInterectionViewController: UIViewController {
         ganharFigurinhasBox.setImage( UIImage(named:"pacoteFechado"), forState: .Normal)
         ganharFigurinhasBox.clipsToBounds = true
         ganharFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
-        ganharFigurinhasBox.layer.borderWidth = 1
+        ganharFigurinhasBox.layer.borderWidth = 5
         ganharFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
         ganharFigurinhasBox.frame.origin = CGPointMake(rankingBox.frame.origin.x, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
         ganharFigurinhasBox.addTarget(self , action: Selector("ganharAction"), forControlEvents: .TouchUpInside)
@@ -53,7 +53,7 @@ class SocialInterectionViewController: UIViewController {
         trocarFigurinhasBox.clipsToBounds = true
         trocarFigurinhasBox.setImage(UIImage(named: "exc.png"), forState: .Normal)
         trocarFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
-        trocarFigurinhasBox.layer.borderWidth = 1
+        trocarFigurinhasBox.layer.borderWidth = 5
         trocarFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
         trocarFigurinhasBox.frame.origin = CGPointMake(rankingBox.frame.origin.x + rankingBox.frame.width - trocarFigurinhasBox.frame.width, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
         trocarFigurinhasBox.addTarget(self , action: Selector("trocarAction:"), forControlEvents: .TouchUpInside)
