@@ -30,7 +30,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         let image = UIImage(named: "stickerz.png")
         let logoImage = UIImageView(image: image!)
         
-        logoImage.frame = CGRect(x: 0, y: 50, width: self.view.frame.width/2, height: self.view.frame.height/7)
+        logoImage.frame.size = (image?.size)!
+        logoImage.center.y = view.frame.height * 0.25
         logoImage.center.x = self.view.center.x
         view.addSubview(logoImage)
         
