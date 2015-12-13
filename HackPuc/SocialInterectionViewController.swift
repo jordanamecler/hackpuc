@@ -11,6 +11,10 @@ import FBSDKCoreKit
 
 class SocialInterectionViewController: UIViewController {
     
+    var rankingBox: RankingBoxView!
+    let globalNames = ["Mary Beth","Gilles","Gordon","Hillary","Johny","Steve","Daniel","Bill","William","Nina"]
+    let friendsNames = ["Jordana","Leo","Maria","Thiago","Hendi","Andrew","Joe","Ugulino","Ricardo","André"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,9 +27,8 @@ class SocialInterectionViewController: UIViewController {
         socialLabel.text = "Social"
         socialLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
         view.addSubview(socialLabel)
-        
-        
-        let rankingBox = RankingBoxView()
+   
+        rankingBox = RankingBoxView(names: friendsNames, names2: globalNames)
         view.addSubview(rankingBox)
         
         let ganharFigurinhasBox = UIButton()
@@ -53,8 +56,9 @@ class SocialInterectionViewController: UIViewController {
     }
 
     
-    func trocarAction() {
+    func trocarAction(button: UIButton) {
         
+       
     }
 
 
