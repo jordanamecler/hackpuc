@@ -60,14 +60,14 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
             case 0:
                 menuCell.label?.text = "The Event"
                 menuCell.categoria = CategoriasAlbum.Evento
-                menuCell.percentageLabel.text = "6%"
+                menuCell.percentageLabel.text = "0%"
             case 1:
                 menuCell.label?.text = "Athletes"
                 menuCell.categoria = CategoriasAlbum.Atleta
                 
                 var numOfTrue = 0
                 for i in album.atletaArray {
-                    if i == true {
+                    if i > 0 {
                         numOfTrue++
                     }
                 }
@@ -79,7 +79,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 var numOfTrue = 0
                 for i in album.equipesArray {
-                    if i == true {
+                    if i > 0 {
                         numOfTrue++
                     }
                 }
@@ -91,7 +91,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
                 var numOfTrue = 0
                 for i in album.modalidadeArray {
-                    if i == true {
+                    if i > 0 {
                         numOfTrue++
                     }
                 }
@@ -103,7 +103,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
                 var numOfTrue = 0
                 for i in album.turismoArray {
-                    if i == true {
+                    if i > 0 {
                         numOfTrue++
                     }
                 }
@@ -115,7 +115,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 var numOfTrue = 0
                 for i in album.olimpiadasAntigasArray {
-                    if i == true {
+                    if i > 0 {
                         numOfTrue++
                     }
                 }

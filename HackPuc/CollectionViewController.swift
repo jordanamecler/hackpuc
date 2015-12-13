@@ -14,7 +14,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
     var categoria: CategoriasAlbum!
     var collectionView: UICollectionView!
     
-    var boolArray: Array<Bool>!
+    var boolArray: Array<Int>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +114,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
             imageName = "modalidade"
         }
         
-        if boolArray[indexPath.row] == true {
+        if boolArray[indexPath.row] > 0 {
             cell.backgroundView = UIImageView(image: UIImage(named: "\(imageName)\(indexPath.row + 1)"))
         }
         else {

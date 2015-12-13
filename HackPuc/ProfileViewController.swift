@@ -41,32 +41,27 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let alb: Album = DAOAlbuns().getBoolenDict()
         
         for i in alb.atletaArray {
-            if i == true {
+            if i > 0 {
                 numTrue++
             }
         }
         for i in alb.equipesArray {
-            if i == true {
+            if i > 0 {
                 numTrue++
             }
         }
         for i in alb.modalidadeArray {
-            if i == true {
+            if i > 0 {
                 numTrue++
             }
         }
         for i in alb.olimpiadasAntigasArray {
-            if i == true {
+            if i > 0 {
                 numTrue++
             }
         }
         for i in alb.turismoArray {
-            if i == true {
-                numTrue++
-            }
-        }
-        for i in alb.olimpiadasAntigasArray {  // evento nao ta fucionado entao dobrei essa categoria
-            if i == true {
+            if i > 0 {
                 numTrue++
             }
         }

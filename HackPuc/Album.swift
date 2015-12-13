@@ -10,11 +10,11 @@ import Foundation
 
 class Album {
     
-    var equipesArray = [Bool]()
-    var atletaArray = [Bool]()
-    var olimpiadasAntigasArray = [Bool]()
-    var turismoArray = [Bool]()
-    var modalidadeArray = [Bool]()
+    var equipesArray = [Int]()
+    var atletaArray = [Int]()
+    var olimpiadasAntigasArray = [Int]()
+    var turismoArray = [Int]()
+    var modalidadeArray = [Int]()
     let maxFigurinhasPorCat = 15
     let totalFigurinhas = 6 * 15
     

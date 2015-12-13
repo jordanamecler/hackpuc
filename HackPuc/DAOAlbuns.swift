@@ -83,11 +83,11 @@ class DAOAlbuns {
         
         let album = Album()
 
-        album.atletaArray = boolDict.valueForKey("atletaArray") as! [Bool]
-        album.equipesArray = boolDict.valueForKey("equipeArray") as! [Bool]
-        album.olimpiadasAntigasArray = boolDict.valueForKey("olimpiadaAntigaArray") as! [Bool]
-        album.turismoArray = boolDict.valueForKey("turismoArray") as! [Bool]
-        album.modalidadeArray = boolDict.valueForKey("modalidadeArray") as! [Bool]
+        album.atletaArray = boolDict.valueForKey("atletaArray") as! [Int]
+        album.equipesArray = boolDict.valueForKey("equipeArray") as! [Int]
+        album.olimpiadasAntigasArray = boolDict.valueForKey("olimpiadaAntigaArray") as! [Int]
+        album.turismoArray = boolDict.valueForKey("turismoArray") as! [Int]
+        album.modalidadeArray = boolDict.valueForKey("modalidadeArray") as! [Int]
         
         
         return album
