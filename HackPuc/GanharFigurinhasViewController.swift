@@ -119,10 +119,21 @@ class GanharFigurinhasViewController: UIViewController, MKMapViewDelegate, CLLoc
             discipline: "DS",
             coordinate: CLLocationCoordinate2D(latitude: -22.893215833061202 , longitude: -43.291969299316406))
         
+        let pacote4 = Pacote(title: "Leblon Beach",
+            locationName: "4 Stickerz!",
+            discipline: "DS",
+            coordinate: CLLocationCoordinate2D(latitude: -22.987631958251498 , longitude: -43.223819732666016))
+        
+        let pacote5 = Pacote(title: "Leblon Beach",
+            locationName: "4 Stickerz!",
+            discipline: "DS",
+            coordinate: CLLocationCoordinate2D(latitude: -22.979335149159237 , longitude: -43.21798324584961))
         
         mapView.addAnnotation(pacote1)
         mapView.addAnnotation(pacote2)
         mapView.addAnnotation(pacote3)
+        mapView.addAnnotation(pacote4)
+        mapView.addAnnotation(pacote5)
 
     }
 }//end of class
