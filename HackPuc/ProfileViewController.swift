@@ -12,6 +12,14 @@ import FBSDKLoginKit
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
+    var completedLabel: UILabel!
+    
+    override func viewWillAppear(animated: Bool) {
+        let perc = calculatePercentage()
+        completedLabel.text = "\(perc)% of the album is completed"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,39 +44,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: nameLabel.frame.size.width + 80, y: nameLabel.frame.size.height + nameLabel.frame.origin.y - 35, width: 40, height: 30)
         
-        var percAlbum = 0
-        var numTrue = 0
-        let alb: Album = DAOAlbuns().getBoolenDict()
+        let percAlbum = calculatePercentage()
         
-        for i in alb.atletaArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.equipesArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.modalidadeArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.olimpiadasAntigasArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.turismoArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        
-        percAlbum = numTrue * 100 / alb.totalFigurinhas
-        
-        let completedLabel = UILabel()
+        completedLabel = UILabel()
         completedLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
         completedLabel.text = "\(percAlbum)% of the album is completed"
@@ -103,6 +81,41 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         view.addSubview(nameLabel)
         view.addSubview(completedLabel)
         view.addSubview(emailLabel)
+
+    }
+    
+    func calculatePercentage() -> Int {
+
+        var numTrue = 0
+        let alb: Album = DAOAlbuns().getBoolenDict()
+        
+        for i in alb.atletaArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.equipesArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.modalidadeArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.olimpiadasAntigasArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.turismoArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        
+       return  numTrue * 100 / alb.totalFigurinhas
 
     }
 
