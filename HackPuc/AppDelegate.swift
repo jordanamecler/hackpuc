@@ -45,11 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 profileItem.selectedImage = profileImage
                 
                 let albumImage = UIImage(named: "cards")
-                let albumItem = UITabBarItem(title: "Album", image: albumImage, tag: 1)
+                let albumItem = UITabBarItem(title: "Stickerz", image: albumImage, tag: 1)
                 albumItem.selectedImage = albumImage
                 
                 let friendsImage = UIImage(named: "friendsItem")
-                let friendsItem = UITabBarItem(title: "Social", image: friendsImage , tag: 2)
+                let friendsItem = UITabBarItem(title: "+Stickerz", image: friendsImage , tag: 2)
                 friendsItem.selectedImage = friendsImage
                 
                 
