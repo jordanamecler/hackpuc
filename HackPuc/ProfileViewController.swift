@@ -12,12 +12,14 @@ import FBSDKLoginKit
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
+    var percString: String!
     var completedLabel: UILabel!
     
     override func viewWillAppear(animated: Bool) {
         let perc = calculatePercentage()
+        percString = "\(perc)% of the album is completed"
         if completedLabel != nil {
-            completedLabel.text = "\(perc)% of the album is completed"
+            completedLabel.text = percString
         }
         
     }
@@ -58,12 +60,13 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         imageView.frame = CGRect(x: countryLabel.frame.size.width - 10, y: countryLabel.frame.size.height + countryLabel.frame.origin.y - 35, width: 40, height: 30)
         
         let percAlbum = calculatePercentage()
+        percString = "\(percAlbum)% of the album is completed"
         
 
-        let completedLabel = UILabel()
+        completedLabel = UILabel()
         completedLabel.frame = CGRectMake(30, countryLabel.frame.size.height + countryLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
-        completedLabel.text = "\(percAlbum)% of the album is completed"
+        completedLabel.text = percString
         completedLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
         let emailLabel = UILabel()
@@ -146,16 +149,6 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
