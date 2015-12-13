@@ -51,7 +51,7 @@ class SocialInterectionViewController: UIViewController {
         trocarFigurinhasBox.layer.borderWidth = 1
         trocarFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
         trocarFigurinhasBox.frame.origin = CGPointMake(rankingBox.frame.origin.x + rankingBox.frame.width - trocarFigurinhasBox.frame.width, rankingBox.frame.origin.y + rankingBox.frame.height + 10)
-        trocarFigurinhasBox.addTarget(self , action: Selector("trocarAction"), forControlEvents: .TouchUpInside)
+        trocarFigurinhasBox.addTarget(self , action: Selector("trocarAction:"), forControlEvents: .TouchUpInside)
         view.addSubview(trocarFigurinhasBox)
         
     }
