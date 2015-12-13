@@ -13,6 +13,8 @@ class RoundedTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        
         // Green round button and tabBar
         
         tabBar.backgroundImage = UIImage(named: "tabBar")

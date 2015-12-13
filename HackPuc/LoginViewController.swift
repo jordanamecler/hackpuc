@@ -22,6 +22,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         
         self.view.backgroundColor = UIColor(red:0.59, green:0.82, blue:0.35, alpha:1)
         

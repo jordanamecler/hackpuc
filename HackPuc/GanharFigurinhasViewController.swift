@@ -81,17 +81,17 @@ class GanharFigurinhasViewController: UIViewController, MKMapViewDelegate, CLLoc
     func createAnottations() {
         
         let pacote1 = Pacote(title: "Christ the Redeemer",
-            locationName: "LN",
+            locationName: "4 Stickerz!",
             discipline: "DS",
             coordinate: CLLocationCoordinate2D(latitude: -22.951792446342846 , longitude: -43.20984743797453))
 
-        let pacote2 = Pacote(title: "Maracana",
-            locationName: "LN",
+        let pacote2 = Pacote(title: "Maracanã",
+            locationName: "8 Stickerz!",
             discipline: "DS",
             coordinate: CLLocationCoordinate2D(latitude: -22.91250752441889 , longitude: -43.230342864990234))
         
-        let pacote3 = Pacote(title: "Engenhao",
-            locationName: "LN",
+        let pacote3 = Pacote(title: "Engenhão",
+            locationName: "4 Stickerz!",
             discipline: "DS",
             coordinate: CLLocationCoordinate2D(latitude: -22.893215833061202 , longitude: -43.291969299316406))
         
