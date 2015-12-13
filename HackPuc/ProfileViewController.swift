@@ -40,6 +40,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         profileLabel.center.x = self.view.center.x
         profileLabel.textAlignment = .Center
         profileLabel.text = "Profile"
+        profileLabel.textColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
         profileLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
                 
         let nameLabel = UILabel()

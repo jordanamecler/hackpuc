@@ -34,6 +34,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = "Stickerz"
+        categoryLabel.textColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
         categoryLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
         
         self.view.addSubview(categoryLabel)

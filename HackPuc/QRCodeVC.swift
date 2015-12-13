@@ -32,6 +32,7 @@ class QRCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         socialLabel.frame = CGRectMake(0, 25, 150, 30)
         socialLabel.center.x = self.view.center.x
         socialLabel.textAlignment = .Center
+        socialLabel.textColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
         socialLabel.text = "QRCode"
         socialLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
         view.addSubview(socialLabel)

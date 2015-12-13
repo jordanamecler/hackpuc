@@ -29,6 +29,7 @@ class AbrirPacotesViewControler: UIViewController {
         categoryLabel.frame = CGRectMake(0, 25, 200, 38)
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
+        categoryLabel.textColor = UIColor(red:0.16, green:0.17, blue:0.21, alpha:1)
         categoryLabel.text = "Let's open it!"
         categoryLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
         
