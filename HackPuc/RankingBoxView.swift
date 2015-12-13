@@ -63,6 +63,9 @@ class RankingBoxView: UIView, UITableViewDataSource, UITableViewDelegate {
         
 
     }
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        return nil
+    }
     
     func changeRanking(segmented: UISegmentedControl) {
         
