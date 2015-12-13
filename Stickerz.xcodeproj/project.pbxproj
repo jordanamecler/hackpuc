@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E49BE21C1D1E5700B6986A /* rasgo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 09E49BE11C1D1E5700B6986A /* rasgo.wav */; };
 		0C255F8B1C1C35BA00978038 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C255F891C1C35BA00978038 /* libc++.tbd */; };
 		0C255F8C1C1C35BA00978038 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C255F8A1C1C35BA00978038 /* libicucore.tbd */; };
 		0C255F8E1C1C364C00978038 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C255F8D1C1C364C00978038 /* Firebase.framework */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09E49BE11C1D1E5700B6986A /* rasgo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rasgo.wav; sourceTree = "<group>"; };
 		0C255F891C1C35BA00978038 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		0C255F8A1C1C35BA00978038 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		0C255F8D1C1C364C00978038 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		3F1389001C1BF58E00EF3127 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09E49BE11C1D1E5700B6986A /* rasgo.wav */,
 				3F1389011C1BF5B100EF3127 /* londrina */,
 			);
 			name = "Supporting Files";
@@ -414,6 +417,7 @@
 				3F1389091C1BF5B100EF3127 /* LondrinaShadow-Regular.otf in Resources */,
 				3F13890A1C1BF5B100EF3127 /* LondrinaSketche-Regular.otf in Resources */,
 				3F1389081C1BF5B100EF3127 /* LondrinaOutline-Regular.otf in Resources */,
+				09E49BE21C1D1E5700B6986A /* rasgo.wav in Resources */,
 				D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */,
 				0CBC5C391C1B8773006BEEFE /* Main.storyboard in Resources */,
 			);

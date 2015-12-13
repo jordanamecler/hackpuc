@@ -6,12 +6,13 @@
 //  Copyright © 2015 Flo. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class AbrirPacotesViewControler: UIViewController {
     
     var pacotinho: UIImageView!
-    var figurinhas = [Figurinha]()
+    var abrePacote : AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +41,17 @@ class AbrirPacotesViewControler: UIViewController {
         touch.numberOfTapsRequired = 1
         pacotinho.addGestureRecognizer(touch)
         
+        
+        if let abrePacote = self.setupAudioPlayerWithFile("rasgo", type:"wav") {
+            self.abrePacote = abrePacote
+        }
+
+        
     }
     
     func openPacotinho() {
+        
+        abrePacote?.play()
         
         UIView.animateWithDuration(1, animations: {
             
@@ -116,5 +125,24 @@ class AbrirPacotesViewControler: UIViewController {
         
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
+        //1
+        let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+        let url = NSURL.fileURLWithPath(path!)
+        
+        //2
+        var audioPlayer:AVAudioPlayer?
+        
+        // 3
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+        } catch {
+            print("Player not available")
+        }
+        
+        return audioPlayer
+    }
+
 
 }

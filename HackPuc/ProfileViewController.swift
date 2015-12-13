@@ -31,10 +31,16 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         nameLabel.text = "Name"
         nameLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
+        let countryLabel = UILabel()
+        countryLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width/2, 40)
+        countryLabel.textAlignment = .Left
+        countryLabel.text = "Country: "
+        countryLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
+        
         let imageName = "Brazil.png"
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: nameLabel.frame.size.width + 80, y: nameLabel.frame.size.height + nameLabel.frame.origin.y - 35, width: 40, height: 30)
+        imageView.frame = CGRect(x: countryLabel.frame.size.width - 10, y: countryLabel.frame.size.height + countryLabel.frame.origin.y - 35, width: 40, height: 30)
         
         var percAlbum = 0
         var numTrue = 0
@@ -69,7 +75,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         percAlbum = numTrue * 100 / alb.totalFigurinhas
         
         let completedLabel = UILabel()
-        completedLabel.frame = CGRectMake(30, nameLabel.frame.size.height + nameLabel.frame.origin.y + 20, self.view.frame.width, 40)
+        completedLabel.frame = CGRectMake(30, countryLabel.frame.size.height + countryLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
         completedLabel.text = "\(percAlbum)% of the album is completed"
         completedLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
@@ -96,13 +102,14 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         let fbLoginButton = FBSDKLoginButton()
         fbLoginButton.delegate = self
-        fbLoginButton.frame.origin = CGPointMake(0, nameLabel.frame.origin.y + nameLabel.frame.height + 120)
+        fbLoginButton.frame.origin = CGPointMake(0, emailLabel.frame.origin.y + emailLabel.frame.height + 120)
         fbLoginButton.center.x = self.view.center.x
         
         self.view.addSubview(fbLoginButton)
         view.addSubview(nameLabel)
         view.addSubview(completedLabel)
         view.addSubview(emailLabel)
+        view.addSubview(countryLabel)
 
     }
 
