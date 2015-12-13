@@ -135,6 +135,24 @@
 			<integer>0</integer>
 			<integer>0</integer>
 		</array>
+		<key>eventoArray</key>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>0</integer>
+		</array>
 	</dict>
 	<dict>
 		<key>missaoDiaria</key>

@@ -69,7 +69,13 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         
         let figurinha = FigurinhaViewController()
         
-        if categoria == CategoriasAlbum.Atleta {
+        
+        // nao tem modelo pro evento, entao vai qualquer coisa
+        if categoria == CategoriasAlbum.Evento {
+            figurinha.atleta = Atleta(nome: "Neymar Jr", pais: "Brazil", idade: 23, qtdMedalhas: 0,index: indexPath.row)
+            figurinha.cardImage = UIImage(named: "neymar")
+        }
+        else if categoria == CategoriasAlbum.Atleta {
             figurinha.atleta = Atleta(nome: "Neymar Jr", pais: "Brazil", idade: 23, qtdMedalhas: 0,index: indexPath.row)
             figurinha.cardImage = UIImage(named: "neymar") 
         }
@@ -117,6 +123,15 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         }
         else if categoria == CategoriasAlbum.Modalidade {
             imageName = "modalidade"
+        }
+        else if categoria == CategoriasAlbum.Evento {
+            imageName = "estadio"
+        }
+        else if categoria == CategoriasAlbum.Turismo {
+            imageName = "pts"
+        }
+        else if categoria == CategoriasAlbum.OlimpiadaAntiga {
+            imageName = "old"
         }
         
         if boolArray[indexPath.row] > 0 {

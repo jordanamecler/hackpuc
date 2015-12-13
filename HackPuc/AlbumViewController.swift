@@ -71,7 +71,14 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
             case 0:
                 menuCell.label?.text = "The Event"
                 menuCell.categoria = CategoriasAlbum.Evento
-                menuCell.percentageLabel.text = "0%"
+                
+                var numOfTrue = 0
+                for i in album.atletaArray {
+                    if i > 0 {
+                        numOfTrue++
+                    }
+                }
+                menuCell.percentageLabel.text = "\(numOfTrue * 100 / album.maxFigurinhasPorCat)%"
             case 1:
                 menuCell.label?.text = "Athletes"
                 menuCell.categoria = CategoriasAlbum.Atleta
@@ -151,7 +158,7 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
         nextViewController.categoria = (tableView.cellForRowAtIndexPath(indexPath) as! AlbumTableViewCell).categoria
 
         if indexPath.section == 0 {
-            nextViewController.boolArray = album.olimpiadasAntigasArray
+            nextViewController.boolArray = album.eventoArray
         }
         else if indexPath.section == 1 {
             nextViewController.boolArray = album.atletaArray

@@ -15,6 +15,7 @@ class Album {
     var olimpiadasAntigasArray = [Int]()
     var turismoArray = [Int]()
     var modalidadeArray = [Int]()
+    var eventoArray = [Int]()
     let maxFigurinhasPorCat = 15
     let totalFigurinhas = 6 * 15
     

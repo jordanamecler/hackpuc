@@ -88,6 +88,7 @@ class DAOAlbuns {
         album.olimpiadasAntigasArray = boolDict.valueForKey("olimpiadaAntigaArray") as! [Int]
         album.turismoArray = boolDict.valueForKey("turismoArray") as! [Int]
         album.modalidadeArray = boolDict.valueForKey("modalidadeArray") as! [Int]
+        album.eventoArray = boolDict.valueForKey("eventoArray") as! [Int]
         
         
         return album
@@ -99,7 +100,7 @@ class DAOAlbuns {
         let plistpath = self.getPath("Atletas")
         let atletasDict = NSMutableArray(contentsOfFile: plistpath)
         
-        let newDict: [String:Array<Int>] = ["equipeArray":alb.equipesArray,"atletaArray":alb.atletaArray,"olimpiadaAntigaArray":alb.olimpiadasAntigasArray,"turismoArray":alb.turismoArray,"modalidadeArray":alb.modalidadeArray]
+        let newDict: [String:Array<Int>] = ["equipeArray":alb.equipesArray,"atletaArray":alb.atletaArray,"olimpiadaAntigaArray":alb.olimpiadasAntigasArray,"turismoArray":alb.turismoArray,"modalidadeArray":alb.modalidadeArray,"eventoArray":alb.eventoArray]
         
         atletasDict![3] = newDict
         

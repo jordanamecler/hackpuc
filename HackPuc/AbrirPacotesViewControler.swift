@@ -68,32 +68,47 @@ class AbrirPacotesViewControler: UIViewController {
                 
             })
             
+            var figurinhas = [Figurinha]()
+            
             let alb = DAOAlbuns().getBoolenDict()
             
             for _ in 0...3 {
                 
-                let i = Int.random(2...6)
+                var fig: Figurinha!
+                
+                let i = Int.random(1...6)
                 let j = Int.random(0...14)
                 
                 switch (i) {
+                case 1:
+                    alb.eventoArray[j]++
+                    fig = Figurinha(categoria: CategoriasAlbum.Evento, index: j)
                 case 2:
                     alb.atletaArray[j]++
+                    fig = Figurinha(categoria: CategoriasAlbum.Atleta, index: j)
                 case 3:
                     alb.equipesArray[j]++
+                    fig = Figurinha(categoria: CategoriasAlbum.Equipe, index: j)
                 case 4:
                     alb.modalidadeArray[j]++
+                    fig = Figurinha(categoria: CategoriasAlbum.Modalidade, index: j)
                 case 5:
                     alb.turismoArray[j]++
+                    fig = Figurinha(categoria: CategoriasAlbum.Turismo, index: j)
                 case 6:
                     alb.olimpiadasAntigasArray[j]++
+                    fig = Figurinha(categoria: CategoriasAlbum.OlimpiadaAntiga, index: j)
                 default:
                     break
                 }
+                figurinhas.append(fig)
                 
                 print("cat: \(i) index: \(j)")
             }
             
             DAOAlbuns().saveAlbum(alb)
+            
+            showFigurinhas(figurinhas)
             
             var totalFigurinhas = 0
             
@@ -129,6 +144,51 @@ class AbrirPacotesViewControler: UIViewController {
         }
 
     }
+    
+    func showFigurinhas(array: [Figurinha]) {
+        
+        var i = 1
+        for fig in array {
+            
+            let card = UIImageView()
+            var str: String!
+            
+            if fig.categoria == CategoriasAlbum.Evento {
+                str = "estadio"
+            }
+            else if fig.categoria == CategoriasAlbum.Atleta {
+                str = "atleta"
+            }
+            else if fig.categoria == CategoriasAlbum.Equipe {
+                str = "equipe"
+            }
+            else if fig.categoria == CategoriasAlbum.Modalidade {
+                str = "modalidade"
+            }
+            else if fig.categoria == CategoriasAlbum.Turismo {
+                str = "pts"
+            }
+            else if fig.categoria == CategoriasAlbum.OlimpiadaAntiga {
+                str = "old"
+            }
+            
+            str = str + "\(fig.index + 1)"
+            card.image = UIImage(named: str)
+            
+            if fig.categoria == CategoriasAlbum.Equipe {
+                card.frame.size = CGSizeMake(140, 90)
+            }
+            else {
+                card.frame.size = CGSizeMake(90, 120)
+            }
+            card.center = CGPointMake(view.frame.width * 0.2 * CGFloat(i), view.frame.height * 0.35)
+            view.addSubview(card)
+            
+            i++
+        }
+        
+    }
+
     
     func doneAction() {
         let n: Int! = self.navigationController?.viewControllers.count

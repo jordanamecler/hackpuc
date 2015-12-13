@@ -19,6 +19,7 @@ class FigurinhaViewController: UIViewController {
     var turismo: Turismo?
     var modalidade: Modalidade?
 
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
