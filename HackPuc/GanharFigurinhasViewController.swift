@@ -78,6 +78,29 @@ class GanharFigurinhasViewController: UIViewController, MKMapViewDelegate, CLLoc
         let region = MKCoordinateRegion(center: locValue, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         mapView.setRegion(region, animated: true)
     }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+
+        if let annotation = annotation as? Pacote {
+            let identifier = "Teste"
+            var pin:MKAnnotationView
+            if let dequeudView = self.mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) {
+                dequeudView.annotation = annotation
+                pin = dequeudView
+            }
+            else {
+                pin = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                pin.canShowCallout = true
+                pin.calloutOffset = CGPointMake(-5, -5)
+            }
+            pin.image = UIImage(named: "locationIcon")
+            return pin
+        }
+        return nil
+        
+    }
+    
+    
 
     func createAnottations() {
         
