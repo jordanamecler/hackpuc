@@ -11,6 +11,7 @@ import UIKit
 class AbrirPacotesViewControler: UIViewController {
     
     var pacotinho: UIImageView!
+    var figurinhas = [Figurinha]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,71 @@ class AbrirPacotesViewControler: UIViewController {
             
         })
         
+        let alb = DAOAlbuns().getBoolenDict()
+        
+        for _ in 0...3 {
+            
+            let i = Int.random(2...6)
+            let j = Int.random(0...14)
+            
+            switch (i) {
+            case 2:
+                alb.atletaArray[j]++
+            case 3:
+                alb.equipesArray[j]++
+            case 4:
+                alb.modalidadeArray[j]++
+            case 5:
+                alb.turismoArray[j]++
+            case 6:
+                alb.olimpiadasAntigasArray[j]++
+            default:
+                break
+            }
+            
+            print("cat: \(i) index: \(j)")
+        }
+        
+        DAOAlbuns().saveAlbum(alb)
+        
+        var totalFigurinhas = 0
+        
+        for i in alb.atletaArray {
+            totalFigurinhas += i
+        }
+        for i in alb.equipesArray {
+            totalFigurinhas += i
+        }
+        for i in alb.modalidadeArray {
+            totalFigurinhas += i
+        }
+        for i in alb.olimpiadasAntigasArray {
+            totalFigurinhas += i
+        }
+        for i in alb.turismoArray {
+            totalFigurinhas += i
+        }
+
+        
+        print("total figurinhas: \(totalFigurinhas)")
+
+        
+        let done = UIButton()
+        let image = UIImage(named: "doneBut")
+        done.setImage(image, forState: .Normal)
+        done.frame.size = (image?.size)!
+        done.center.x = view.center.x
+        done.center.y = view.frame.height * 0.8
+        done.addTarget(self, action: Selector("doneAction"), forControlEvents: .TouchUpInside)
+        
+        view.addSubview(done)
+        
+        
+    }
+    
+    func doneAction() {
+        
+        navigationController?.popViewControllerAnimated(true)
     }
 
 }

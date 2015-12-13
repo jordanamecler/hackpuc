@@ -59,6 +59,7 @@ class GanharFigurinhasViewController: UIViewController, MKMapViewDelegate, CLLoc
             locationManager.requestWhenInUseAuthorization()
         }
     }
+    
     func backPressed() {
         
         navigationController?.popViewControllerAnimated(true)

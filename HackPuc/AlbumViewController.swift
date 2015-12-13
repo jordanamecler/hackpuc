@@ -13,6 +13,12 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let categoriesTableView = UITableView()
     var album: Album!
     
+    override func viewWillAppear(animated: Bool) {
+        print("Atualiza tableView")
+        categoriesTableView.reloadData()
+        album = DAOAlbuns().getBoolenDict()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

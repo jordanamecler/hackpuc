@@ -40,6 +40,8 @@
 		3F622AC91C1C9AAD00753FC1 /* FacebookFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */; };
 		3F622ACB1C1CA58500753FC1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622ACA1C1CA58500753FC1 /* Album.swift */; };
 		3F622ACD1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622ACC1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift */; };
+		3F622ACF1C1D097B00753FC1 /* Figurinha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622ACE1C1D097B00753FC1 /* Figurinha.swift */; };
+		3F622AD11C1D0A6200753FC1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F622AD01C1D0A6200753FC1 /* Extensions.swift */; };
 		D00BBACC1C1BC2C10084355F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */; };
 		D00BBACD1C1BC2C10084355F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */; };
 		D06645411C1C06F2008BEB6B /* Atletas.plist in Resources */ = {isa = PBXBuildFile; fileRef = D066453A1C1C06F2008BEB6B /* Atletas.plist */; };
@@ -111,6 +113,8 @@
 		3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFacade.swift; sourceTree = "<group>"; };
 		3F622ACA1C1CA58500753FC1 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		3F622ACC1C1CFEF600753FC1 /* AbrirPacotesViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbrirPacotesViewControler.swift; sourceTree = "<group>"; };
+		3F622ACE1C1D097B00753FC1 /* Figurinha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Figurinha.swift; sourceTree = "<group>"; };
+		3F622AD01C1D0A6200753FC1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D00BBACA1C1BC2C10084355F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D00BBACB1C1BC2C10084355F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D066453A1C1C06F2008BEB6B /* Atletas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atletas.plist; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				D066453B1C1C06F2008BEB6B /* Atleta.swift */,
 				D066453C1C1C06F2008BEB6B /* DAOAlbuns.swift */,
 				3F622ACA1C1CA58500753FC1 /* Album.swift */,
+				3F622ACE1C1D097B00753FC1 /* Figurinha.swift */,
 				D066453D1C1C06F2008BEB6B /* Equipe.swift */,
 				D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */,
 				D066453F1C1C06F2008BEB6B /* Turismo.swift */,
@@ -285,6 +290,7 @@
 				0C255F8F1C1C3B5A00978038 /* Login.swift */,
 				3F622AC81C1C9AAD00753FC1 /* FacebookFacade.swift */,
 				0C255F931C1CBFB400978038 /* SystemStatus.swift */,
+				3F622AD01C1D0A6200753FC1 /* Extensions.swift */,
 			);
 			name = Modelo;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				3F622ACB1C1CA58500753FC1 /* Album.swift in Sources */,
 				3F622AC91C1C9AAD00753FC1 /* FacebookFacade.swift in Sources */,
 				D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */,
+				3F622ACF1C1D097B00753FC1 /* Figurinha.swift in Sources */,
 				D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */,
 				0C255F921C1C743700978038 /* PopUpViewController.swift in Sources */,
 				0CBC5C341C1B8773006BEEFE /* AppDelegate.swift in Sources */,
@@ -454,6 +461,7 @@
 				3F1389101C1C49BA00EF3127 /* RankingBoxView.swift in Sources */,
 				0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */,
 				D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */,
+				3F622AD11C1D0A6200753FC1 /* Extensions.swift in Sources */,
 				3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */,
 				D0820AF01C1CE0D700A45356 /* Pacote.swift in Sources */,
 				0C255F941C1CBFB400978038 /* SystemStatus.swift in Sources */,
