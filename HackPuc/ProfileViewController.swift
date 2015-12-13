@@ -12,6 +12,14 @@ import FBSDKLoginKit
 
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
 
+    var completedLabel: UILabel!
+    
+    override func viewWillAppear(animated: Bool) {
+        let perc = calculatePercentage()
+        completedLabel.text = "\(perc)% of the album is completed"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,38 +50,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: countryLabel.frame.size.width - 10, y: countryLabel.frame.size.height + countryLabel.frame.origin.y - 35, width: 40, height: 30)
         
-        var percAlbum = 0
-        var numTrue = 0
-        let alb: Album = DAOAlbuns().getBoolenDict()
+        let percAlbum = calculatePercentage()
         
-        for i in alb.atletaArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.equipesArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.modalidadeArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.olimpiadasAntigasArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        for i in alb.turismoArray {
-            if i > 0 {
-                numTrue++
-            }
-        }
-        
-        percAlbum = numTrue * 100 / alb.totalFigurinhas
-        
+
         let completedLabel = UILabel()
         completedLabel.frame = CGRectMake(30, countryLabel.frame.size.height + countryLabel.frame.origin.y + 20, self.view.frame.width, 40)
         completedLabel.textAlignment = .Left
@@ -110,6 +89,41 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         view.addSubview(completedLabel)
         view.addSubview(emailLabel)
         view.addSubview(countryLabel)
+
+    }
+    
+    func calculatePercentage() -> Int {
+
+        var numTrue = 0
+        let alb: Album = DAOAlbuns().getBoolenDict()
+        
+        for i in alb.atletaArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.equipesArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.modalidadeArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.olimpiadasAntigasArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        for i in alb.turismoArray {
+            if i > 0 {
+                numTrue++
+            }
+        }
+        
+       return  numTrue * 100 / alb.totalFigurinhas
 
     }
 

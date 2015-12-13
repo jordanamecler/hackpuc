@@ -23,6 +23,9 @@ class AlbumTableViewCell: UITableViewCell {
         self.clipsToBounds = true
         self.layer.cornerRadius = 30
         
+        self.layer.borderColor = UIColor(red:0.58, green:0.78, blue:0.42, alpha:1).CGColor
+        self.layer.borderWidth = 5
+        
         let grayFilter = UIView()
         grayFilter.frame.size = CGSizeMake(cellWidth, cellWidth / 2)
         grayFilter.backgroundColor = UIColor.whiteColor()
