@@ -23,6 +23,28 @@ class QRCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "navbar")
+        let topBar = UIImageView(image: image)
+        topBar.frame = CGRectMake(0, 0, (image?.size.width)!, (image?.size.height)!)
+        self.view.addSubview(topBar)
+        
+        let socialLabel = UILabel()
+        socialLabel.frame = CGRectMake(0, 25, 150, 30)
+        socialLabel.center.x = self.view.center.x
+        socialLabel.textAlignment = .Center
+        socialLabel.text = "QRCode"
+        socialLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 30)
+        view.addSubview(socialLabel)
+        
+        
+        let backButton = UIButton()
+        backButton.frame = CGRectMake(10, 30, 20, 25)
+        backButton.setImage(UIImage(named: "backButton.png"), forState: .Normal)
+        backButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
+        backButton.addTarget(self, action: "pop", forControlEvents: .TouchUpInside)
+
+        self.view.addSubview(backButton)
+        
         messageLabel = UILabel(frame: CGRectMake(0, 0, view.frame.width, 40))
         messageLabel.center.x = view.center.x
         messageLabel.center.y = view.frame.height
@@ -60,7 +82,10 @@ class QRCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             captureSession?.startRunning()
             
             // Move the message label to the top view
+            view.bringSubviewToFront(topBar)
+            view.bringSubviewToFront(socialLabel)
             view.bringSubviewToFront(messageLabel)
+            view.bringSubviewToFront(backButton)
             
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
@@ -89,6 +114,7 @@ class QRCodeVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
         self.navigationController?.popViewControllerAnimated(false)
     }
+    
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         

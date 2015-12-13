@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
         let nameLabel = UILabel()
         nameLabel.frame = CGRectMake(30, profileLabel.frame.size.height + profileLabel.frame.origin.y + 20, self.view.frame.width/2, 40)
         nameLabel.textAlignment = .Left
-        nameLabel.text = "Name"
+        nameLabel.text = "Name: Maria Carolina"
         nameLabel.font = UIFont(name: "LondrinaSolid-Regular", size: 20)
         
         let countryLabel = UILabel()
