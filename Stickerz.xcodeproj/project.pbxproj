@@ -53,6 +53,7 @@
 		D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453F1C1C06F2008BEB6B /* Turismo.swift */; };
 		D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06645401C1C06F2008BEB6B /* Modalidade.swift */; };
 		D0820AF01C1CE0D700A45356 /* Pacote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0820AEF1C1CE0D700A45356 /* Pacote.swift */; };
+		D0820AF21C1D4A7E00A45356 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0820AF11C1D4A7E00A45356 /* QRCodeVC.swift */; };
 		D0E8DD5F1C1C808E003920E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */; };
 		D0E8DD611C1C8095003920E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E8DD601C1C8095003920E1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +128,7 @@
 		D066453F1C1C06F2008BEB6B /* Turismo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turismo.swift; sourceTree = "<group>"; };
 		D06645401C1C06F2008BEB6B /* Modalidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modalidade.swift; sourceTree = "<group>"; };
 		D0820AEF1C1CE0D700A45356 /* Pacote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pacote.swift; sourceTree = "<group>"; };
+		D0820AF11C1D4A7E00A45356 /* QRCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D0E8DD601C1C8095003920E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -213,6 +215,7 @@
 				0C255F911C1C743700978038 /* PopUpViewController.swift */,
 				3F13890E1C1BF72D00EF3127 /* Album */,
 				0C95D72A1C1BE02B00B43C43 /* CollectionViewController.swift */,
+				D0820AF11C1D4A7E00A45356 /* QRCodeVC.swift */,
 				3F1388FE1C1BF30E00EF3127 /* FigurinhaViewController.swift */,
 				3F1388FC1C1BE33200EF3127 /* RoundedTabBarViewController.swift */,
 				3F622AC61C1C723E00753FC1 /* GanharFigurinhasViewController.swift */,
@@ -449,6 +452,7 @@
 				3F1388F91C1BD2A900EF3127 /* SocialInterectionViewController.swift in Sources */,
 				3F1388F51C1BD27C00EF3127 /* AlbumViewController.swift in Sources */,
 				D06645431C1C06F2008BEB6B /* DAOAlbuns.swift in Sources */,
+				D0820AF21C1D4A7E00A45356 /* QRCodeVC.swift in Sources */,
 				3F622ACB1C1CA58500753FC1 /* Album.swift in Sources */,
 				3F622AC91C1C9AAD00753FC1 /* FacebookFacade.swift in Sources */,
 				D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */,

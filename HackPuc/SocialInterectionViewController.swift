@@ -64,7 +64,7 @@ class SocialInterectionViewController: UIViewController {
     
     func trocarAction(button: UIButton) {
         
-        let trocar = AbrirPacotesViewControler()
+        let trocar = QRCodeVC()
         self.navigationController?.pushViewController(trocar, animated: true)
        
     }

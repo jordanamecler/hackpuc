@@ -131,8 +131,9 @@ class AbrirPacotesViewControler: UIViewController {
     }
     
     func doneAction() {
-        
-        navigationController?.popViewControllerAnimated(true)
+        let n: Int! = self.navigationController?.viewControllers.count
+        self.navigationController?.popViewControllerAnimated(true)
+        (self.navigationController?.viewControllers[n-2] as! QRCodeVC).pop()
     }
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer?  {
