@@ -48,6 +48,7 @@
 		D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */; };
 		D06645461C1C06F2008BEB6B /* Turismo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066453F1C1C06F2008BEB6B /* Turismo.swift */; };
 		D06645471C1C06F2008BEB6B /* Modalidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06645401C1C06F2008BEB6B /* Modalidade.swift */; };
+		D0820AF01C1CE0D700A45356 /* Pacote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0820AEF1C1CE0D700A45356 /* Pacote.swift */; };
 		D0E8DD5F1C1C808E003920E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */; };
 		D0E8DD611C1C8095003920E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E8DD601C1C8095003920E1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,7 @@
 		D066453E1C1C06F2008BEB6B /* OlimpiadaAntiga.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OlimpiadaAntiga.swift; sourceTree = "<group>"; };
 		D066453F1C1C06F2008BEB6B /* Turismo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turismo.swift; sourceTree = "<group>"; };
 		D06645401C1C06F2008BEB6B /* Modalidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modalidade.swift; sourceTree = "<group>"; };
+		D0820AEF1C1CE0D700A45356 /* Pacote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pacote.swift; sourceTree = "<group>"; };
 		D0E8DD5E1C1C808E003920E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D0E8DD601C1C8095003920E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -268,6 +270,7 @@
 		D00BBACE1C1BC30B0084355F /* Modelo */ = {
 			isa = PBXGroup;
 			children = (
+				D0820AEF1C1CE0D700A45356 /* Pacote.swift */,
 				D06645481C1C06F8008BEB6B /* Data */,
 				D066453B1C1C06F2008BEB6B /* Atleta.swift */,
 				D066453C1C1C06F2008BEB6B /* DAOAlbuns.swift */,
@@ -448,6 +451,7 @@
 				0C95D72B1C1BE02B00B43C43 /* CollectionViewController.swift in Sources */,
 				D06645451C1C06F2008BEB6B /* OlimpiadaAntiga.swift in Sources */,
 				3F1388FD1C1BE33200EF3127 /* RoundedTabBarViewController.swift in Sources */,
+				D0820AF01C1CE0D700A45356 /* Pacote.swift in Sources */,
 				0C255F941C1CBFB400978038 /* SystemStatus.swift in Sources */,
 				0C255F901C1C3B5A00978038 /* Login.swift in Sources */,
 			);

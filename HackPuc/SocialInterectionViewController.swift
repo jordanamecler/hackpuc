@@ -46,6 +46,7 @@ class SocialInterectionViewController: UIViewController {
         
         let trocarFigurinhasBox = UIButton()
         trocarFigurinhasBox.clipsToBounds = true
+        trocarFigurinhasBox.setImage(UIImage(named: "exc.png"), forState: .Normal)
         trocarFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         trocarFigurinhasBox.layer.borderWidth = 1
         trocarFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
