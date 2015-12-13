@@ -38,7 +38,7 @@ class SocialInterectionViewController: UIViewController {
         
         let ganharFigurinhasBox = UIButton()
         ganharFigurinhasBox.tag = 0
-        ganharFigurinhasBox.setImage( UIImage(named:"pacoteFechado"), forState: .Normal)
+        ganharFigurinhasBox.setImage( UIImage(named:"pacoteBut.png"), forState: .Normal)
         ganharFigurinhasBox.clipsToBounds = true
         ganharFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         ganharFigurinhasBox.layer.borderWidth = 5
@@ -51,7 +51,7 @@ class SocialInterectionViewController: UIViewController {
         
         let trocarFigurinhasBox = UIButton()
         trocarFigurinhasBox.clipsToBounds = true
-        trocarFigurinhasBox.setImage(UIImage(named: "exc.png"), forState: .Normal)
+        trocarFigurinhasBox.setImage(UIImage(named: "qrCodeBut.png"), forState: .Normal)
         trocarFigurinhasBox.layer.borderColor = UIColor(red:0.55, green:0.75, blue:0.4, alpha:1).CGColor
         trocarFigurinhasBox.layer.borderWidth = 5
         trocarFigurinhasBox.frame.size = CGSizeMake(view.frame.width / 2.3, view.frame.height / 4)
