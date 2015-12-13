@@ -16,18 +16,25 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewWillAppear(animated: Bool) {
         let perc = calculatePercentage()
-        completedLabel.text = "\(perc)% of the album is completed"
+        if completedLabel != nil {
+            completedLabel.text = "\(perc)% of the album is completed"
+        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let image1 = UIImage(named: "navbar")
+        let topBar = UIImageView(image: image1)
+        topBar.frame = CGRectMake(0, 0, (image1?.size.width)!, (image1?.size.height)!)
+        self.view.addSubview(topBar)
 
         self.view.backgroundColor = .whiteColor()
 
         
         let profileLabel = UILabel()
-        profileLabel.frame = CGRectMake(0, 40, 150, 30)
+        profileLabel.frame = CGRectMake(0, 25, 150, 30)
         profileLabel.center.x = self.view.center.x
         profileLabel.textAlignment = .Center
         profileLabel.text = "Profile"

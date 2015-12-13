@@ -22,10 +22,15 @@ class AlbumViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "navbar")
+        let topBar = UIImageView(image: image)
+        topBar.frame = CGRectMake(0, 0, (image?.size.width)!, (image?.size.height)!)
+        self.view.addSubview(topBar)
+        
         album = DAOAlbuns().getBoolenDict()
         
         let categoryLabel = UILabel()
-        categoryLabel.frame = CGRectMake(0, 40, 200, 38)
+        categoryLabel.frame = CGRectMake(0, 25, 200, 38)
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = "Stickerz"

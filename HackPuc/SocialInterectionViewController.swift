@@ -18,10 +18,15 @@ class SocialInterectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "navbar")
+        let topBar = UIImageView(image: image)
+        topBar.frame = CGRectMake(0, 0, (image?.size.width)!, (image?.size.height)!)
+        self.view.addSubview(topBar)
+        
         self.view.backgroundColor = .whiteColor()
         
         let socialLabel = UILabel()
-        socialLabel.frame = CGRectMake(0, 40, 150, 30)
+        socialLabel.frame = CGRectMake(0, 25, 150, 30)
         socialLabel.center.x = self.view.center.x
         socialLabel.textAlignment = .Center
         socialLabel.text = "Social"

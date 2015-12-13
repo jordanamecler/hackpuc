@@ -20,6 +20,11 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.whiteColor()
+        
+        let image = UIImage(named: "navbar")
+        let topBar = UIImageView(image: image)
+        topBar.frame = CGRectMake(0, 0, (image?.size.width)!, (image?.size.height)!)
+        self.view.addSubview(topBar)
        
         
         let backButton = UIButton()
@@ -31,7 +36,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         self.view.addSubview(backButton)
         
         let categoryLabel = UILabel()
-        categoryLabel.frame = CGRectMake(0, 40, 150, 30)
+        categoryLabel.frame = CGRectMake(0, 30, 150, 30)
         categoryLabel.center.x = self.view.center.x
         categoryLabel.textAlignment = .Center
         categoryLabel.text = type
